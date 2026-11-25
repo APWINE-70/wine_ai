@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Presentation Slides (12 Pages) — Lanna Power Reliability</title>
+  <style>
+    @page { size: 16in 9in; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Leelawadee UI", "Tahoma", "Noto Sans Thai", sans-serif; background: #cbd5e1; color: #0f172a; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      margin: 16px auto;
+      background: #ffffff;
+      padding: 44px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide.cover {
+      background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+      color: #ffffff;
+    }
+    .slide-header { border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline; }
+    .slide-tag { font-size: 13px; font-weight: 700; color: #0284c7; text-transform: uppercase; letter-spacing: 0.04em; }
+    .slide h2 { font-size: 28px; font-weight: 700; color: #0f172a; margin-top: 4px; }
+    .slide-num { font-size: 14px; color: #64748b; font-weight: 600; }
+    .content { flex: 1; padding-top: 22px; display: flex; flex-direction: column; gap: 16px; }
+    .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid #cbd5e1; border-radius: 12px; padding: 18px 20px; background: #f8fafc; }
+    .card.white { background: #ffffff; }
+    .card.accent { border-left: 5px solid #0284c7; }
+    .card.warn { border-left: 5px solid #e11d48; background: #fff1f2; border-color: #fecdd3; }
+    .card.good { border-left: 5px solid #059669; background: #ecfdf5; border-color: #a7f3d0; }
+    h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #0f172a; }
+    p, li { font-size: 16px; line-height: 1.55; color: #334155; }
+    ul { padding-left: 22px; }
+    .big-num { font-size: 38px; font-weight: 800; color: #0284c7; line-height: 1.15; }
+    .big-num.rose { color: #e11d48; }
+    .big-num.green { color: #059669; }
+    table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 8px 10px; text-align: left; }
+    th { background: #f1f5f9; font-weight: 700; color: #0f172a; }
+    .footer { border-top: 1px solid #e2e8f0; padding-top: 10px; display: flex; justify-content: space-between; font-size: 12.5px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <!-- Slide 1 -->
+  <section class="slide cover">
+    <div style="font-size:15px; color:#bae6fd; font-weight:600;">การแข่งขันทักษะการวิเคราะห์ข้อมูล: ไฟฟ้าดับ · บริษัท ล้านนาพาวเวอร์ดิสทริบิวชัน จำกัด</div>
+    <div style="margin:auto 0;">
+      <h1 style="font-size:48px; font-weight:800; line-height:1.2;">พลิกวิกฤตไฟดับล้านนาพาวเวอร์:<br/>ลงทุนปี 2568 อย่างแม่นยำ ลด SAIDI -27.6%</h1>
+      <p style="font-size:21px; color:#e0f2fe; margin-top:20px;">วิเคราะห์ข้อมูลเหตุการณ์ไฟดับ 4 จังหวัดภาคเหนือ (2566–2567) ครอบคลุม 2,594 เหตุการณ์ Unplanned และ 54 สายป้อน</p>
+    </div>
+    <div style="display:flex; justify-content:space-between; font-size:14px; color:#bae6fd;">
+      <span>ข้อมูลถึง: 2024-12-31 23:59 · ทะเบียนสายป้อน: 2025-01-05</span>
+      <span>Slide 1 / 12</span>
+    </div>
+  </section>
+
+  <!-- Slide 2 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">1. ปัญหาและเป้าหมาย</div><h2>สถานการณ์ปี 2566–2567 และโจทย์จัดสรรงบปี 2568</h2></div><div class="slide-num">2 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card accent">
+        <h3>บริบทองค์กรและปัญหาหลัก</h3>
+        <ul>
+          <li>จำหน่ายไฟฟ้าใน <strong>4 จังหวัดภาคเหนือ</strong> (เชียงใหม่, ลำพูน, ลำปาง, เชียงราย): 8 สถานี, 54 สายป้อน, ผู้ใช้ไฟรวม ~214,266 ราย</li>
+          <li>ปี 2566–2567 ลูกค้าร้องเรียนไฟดับพุ่งสูง แต่งบปรับปรุงปี 2568 มีจำกัด</li>
+          <li>ข้อมูลกระจัดกระจาย 4 ระบบ (Call Center, SCADA, GIS, กรมอุตุฯ) ปะปน error</li>
+        </ul>
+      </div>
+      <div class="card white">
+        <h3>3 คำถามตัดสินใจหลักของผู้บริหาร</h3>
+        <ul>
+          <li><strong>สายป้อนใด (Where):</strong> 5 สายป้อนไหนควรได้งบก่อน?</li>
+          <li><strong>เรื่องใด (What):</strong> ต้นไม้ อุปกรณ์ สัตว์ หรือเวลาเดินทาง?</li>
+          <li><strong>ช่วงเวลาใด (When):</strong> เดือน/ชั่วโมงใดควรวางแผนเชิงรุก?</li>
+          <li><strong>เป้าหมายวัดผล:</strong> ลด SAIFI, SAIDI, CAIDI พร้อมแดชบอร์ดใช้งานจริง</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>ปัญหา/เป้าหมาย</span><span>กรอบข้อมูล: 2023-01-01 ถึง 2024-12-31</span></div>
+  </section>
+
+  <!-- Slide 3 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">2. วิธีทำ (ภารกิจ N)</div><h2>ตรวจสอบคุณภาพข้อมูล 4 มิติ ก่อนวิเคราะห์</h2></div><div class="slide-num">3 / 12</div></div>
+    <div class="content">
+      <table>
+        <thead><tr><th>มิติ</th><th>ปัญหาที่ตรวจพบในข้อมูลดิบ (ก่อนทำ Mission B)</th><th>จำนวน</th><th>ข้อเสนอแนะถึงเจ้าของระบบต้นทาง</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Completeness</strong></td><td>ขาดอากาศ 25 วัน, <code>end_time</code> 91, <code>duration</code> 116, <code>customers</code> 70, <code>feeders.Customers</code> 2 สาย</td><td>304+</td><td>ตั้ง Alert ETL รายวัน, บังคับกรอกค่าสำคัญก่อนปิดใบงาน</td></tr>
+          <tr><td><strong>Accuracy</strong></td><td>ค่าหลอก <code>9999/99999</code> (8), หน่วยชั่วโมง (41), เวลาสลับ (13), <code>cust &gt; feeder</code> (16), °F (60), ฝน -999 (40), เมตร (4)</td><td>182+</td><td>Validate เพดานลูกค้าจาก GIS, บังคับหน่วยนาที/กม./°C</td></tr>
+          <tr><td><strong>Consistency</strong></td><td>ซ้ำทุกคอลัมน์ (68) + ซ้ำข้ามช่องทาง (32), พ.ศ. (250), <code>feeder_id</code> (108), 26 คำเรียกสาเหตุ</td><td>458+</td><td>ใช้ Master Incident ID ร่วมกันระหว่าง SCADA &amp; Call Center</td></tr>
+          <tr><td><strong>Timeliness</strong></td><td>ปีพิมพ์ผิด 2014/2042/2204 (5), ทะเบียนสายป้อนส่งออก 2025-01-05</td><td>5 + 54</td><td>บังคับ ISO-8601 และเก็บ Snapshot จำนวนลูกค้าสิ้นปี</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer"><span>วิธีทำ · ภารกิจ N (ICT-DRMC-384B)</span><span>ดูรายละเอียดทั้งหมดใน docs/quality_report.md</span></div>
+  </section>
+
+  <!-- Slide 4 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">2. วิธีทำ (ภารกิจ A)</div><h2>Pipeline รันซ้ำได้ 100% — คลีนค่าผิดปกติพลิกบทสรุป</h2></div><div class="slide-num">4 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card warn">
+        <h3>ก่อนคลีนข้อมูล (หลอกตา!)</h3>
+        <div class="big-num rose">2,898.5 → 2,232.8</div>
+        <p style="margin-top:8px;">SAIDI ปี 2566 พุ่งเกินจริง &gt;3.5 เท่า จากค่า <code>99999</code> และ <code>customers_affected</code> สูงถึง 29,178 ราย จนสรุปผิดว่าปี 2567 <strong>ดีขึ้น -23.0%</strong></p>
+      </div>
+      <div class="card good">
+        <h3>หลังคลีนข้อมูล (ความจริง!)</h3>
+        <div class="big-num green">817.0 → 1,155.8</div>
+        <p style="margin-top:8px;">หลังตัดซ้ำ <code>2,843→2,743</code> (FK Match <strong>99.64%</strong>) และแก้ 14 รูปแบบ พบว่า SAIDI ปี 2567 <strong>แย่ลง +41.5%</strong></p>
+      </div>
+    </div>
+    <div class="card accent"><p><strong>Zero Silent Drops:</strong> ทุกแถวที่ตัดหรือแก้ไขถูกบันทึกใน <code>audit_log.json</code> ครบ 100% พร้อมเก็บค่าดิบควบคู่ค่าที่คลีน</p></div>
+    <div class="footer"><span>วิธีทำ · ภารกิจ A</span><span>src/clean_pipeline.py + docs/data_dictionary.md</span></div>
+  </section>
+
+  <!-- Slide 5 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">2. วิธีทำ (กติกาและข้อจำกัด)</div><h2>สูตรคำนวณ SAIFI/SAIDI และหลักการแยก Error vs พายุจริง</h2></div><div class="slide-num">5 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card">
+        <h3>กติกาการคำนวณที่ยึดถือเคร่งครัด</h3>
+        <ul>
+          <li>คำนวณจาก <strong>Unplanned เท่านั้น</strong> (2,594 ครั้ง) โดยตัด Planned 149 ครั้งออก</li>
+          <li>ตัวหาร: ผู้ใช้ไฟรวม <strong>214,266 ราย</strong> (raw non-null = 204,615 + ประมาณค่า 2 สาย)</li>
+          <li>แสดงตัวเลขคู่ <strong>Inclusive vs Strict Clean</strong> (sensitivity ~2.7–3.1%)</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h3>ทำไมห้ามลบพายุเชียงรายด้วย IQR?</h3>
+        <ul>
+          <li>ค่าหลอก <code>99999</code> = <strong>Data Error</strong> ต้องล้าง</li>
+          <li>พายุเชียงราย 22–23 ส.ค. 2567 = <strong>เหตุการณ์จริง</strong> ที่สร้างผลกระทบต่อลูกค้าจริง</li>
+          <li>จึง <strong>คงไว้ในชุดหลัก</strong> และสร้าง Toggle แยกให้เห็นผลทั้ง <strong>รวมและไม่รวมพายุ</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>วิธีทำ · Reliability Engine</span><span>src/metrics.py + src/eda_analysis.py</span></div>
+  </section>
+
+  <!-- Slide 6 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">3. ข้อค้นพบ (Q1)</div><h2>ภาพรวม YoY: ปี 2567 แย่ลง +41.5% (แยกพายุแล้วยัง +9.8%)</h2></div><div class="slide-num">6 / 12</div></div>
+    <div class="content">
+      <table>
+        <thead><tr><th>ชุดเปรียบเทียบ (เฉพาะ Unplanned)</th><th>ปี 2566</th><th>ปี 2567</th><th>เปลี่ยนแปลง YoY</th></tr></thead>
+        <tbody>
+          <tr><td><strong>รวมทุกเหตุการณ์ (รวมพายุ ส.ค.67)</strong></td><td>1,180 ครั้ง · SAIFI 6.32 · SAIDI <strong>817.01</strong></td><td>1,414 ครั้ง · SAIFI 7.65 · SAIDI <strong>1,155.79</strong></td><td>ครั้ง +19.8% · SAIFI +21.1% · SAIDI <strong>+41.5%</strong></td></tr>
+          <tr><td><strong>ไม่รวมพายุเชียงราย 22–23 ส.ค. 2567</strong></td><td>1,180 ครั้ง · SAIFI 6.32 · SAIDI <strong>817.01</strong></td><td>1,335 ครั้ง · SAIFI 7.30 · SAIDI <strong>897.34</strong></td><td>ครั้ง +13.1% · SAIFI +15.6% · SAIDI <strong>+9.8%</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="card warn"><p><strong>พายุเชียงราย 22–23 ส.ค. 2567:</strong> เกิดเพียง <strong>79 เหตุการณ์ (5.59%)</strong> แต่สร้าง <strong>55.38 ล้าน customer-minutes (22.36% ของปี 2567)</strong> หรือ <strong>+258.46 นาที SAIDI</strong> · ข้อจำกัด: ใช้ตัวหารลูกค้าปี 2025-01-05 คงที่ทั้ง 2 ปี</p></div>
+    </div>
+    <div class="footer"><span>ข้อค้นพบ · Q1 ภาพรวม</span><span>ช่วงเวลา: 2566–2567</span></div>
+  </section>
+
+  <!-- Slide 7 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">3. ข้อค้นพบ (Q2 &amp; Q4)</div><h2>ต้นไม้กินผลกระทบ 55.7% และรูปแบบเวลาแยกชัดตามสาเหตุ</h2></div><div class="slide-num">7 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card">
+        <h3>Q2: จำนวนครั้ง vs Customer-Minutes</h3>
+        <ul>
+          <li><strong>ต้นไม้ (`tree`):</strong> 43.2% ของครั้ง → <strong>55.7%</strong> ของผลกระทบ (มัธยฐาน 166 น.)</li>
+          <li><strong>อุปกรณ์ (`equipment`):</strong> 10.9% ของครั้ง → <strong>16.7%</strong> ของผลกระทบ</li>
+          <li><strong>สัตว์ (`animal`):</strong> 20.7% ของครั้ง → เพียง <strong>5.6%</strong> ของผลกระทบ (ดับสั้น 55 น.)</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h3>Q4: ฤดูกาล &amp; ช่วงเวลา 24 ชม.</h3>
+        <ul>
+          <li><strong>ฤดูฝน (พ.ค.–ต.ค.):</strong> <strong>58.8%</strong> ของไฟดับทั้งหมด (พีก ส.ค. 335 ครั้ง)</li>
+          <li><strong>ฟ้าผ่า 67% &amp; ต้นไม้ 44.5%:</strong> กระจุกตัวช่วงบ่าย <strong>14:00–18:59 น.</strong></li>
+          <li><strong>สัตว์ 46.1%:</strong> กระจุกตัวตอนเช้าตรู่ <strong>05:00–09:59 น.</strong> (พีก 06:00 น.)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card"><p><strong>ข้อจำกัดข้อมูล:</strong> มีสาเหตุ <code>unknown</code> 234 ครั้ง (9.0%) และเวลาแจ้งจาก Call Center อาจคลาดเคลื่อนจากเวลาตัดวงจรจริงเล็กน้อย</p></div>
+    <div class="footer"><span>ข้อค้นพบ · Q2 &amp; Q4</span><span>ช่วงเวลา: 2566–2567</span></div>
+  </section>
+
+  <!-- Slide 8 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">3. ข้อค้นพบ (Q3)</div><h2>5 สายป้อนชนบทสร้าง 32.5% ของความเสียหาย + Alert CMI-F14</h2></div><div class="slide-num">8 / 12</div></div>
+    <div class="content">
+      <table>
+        <thead><tr><th>อันดับ</th><th>Feeder</th><th>จังหวัด / พื้นที่</th><th>ยาว / ลูกค้า</th><th>ครั้ง (66→67)</th><th>Customer-Min (% ระบบ)</th><th>สาเหตุหลัก</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>CRI-F11</strong></td><td>เชียงราย / Rural</td><td>82.4 กม. / 3,050</td><td>155 (69→86)</td><td>39.41M (<strong>9.34%</strong>)</td><td>tree (high)</td></tr>
+          <tr><td>2</td><td><strong>CRI-F03</strong></td><td>เชียงราย / Rural</td><td>70.1 กม. / 2,837</td><td>103 (39→64)</td><td>26.61M (<strong>6.31%</strong>)</td><td>tree (high)</td></tr>
+          <tr><td>3</td><td><strong>CRI-F04</strong></td><td>เชียงราย / Rural</td><td>73.1 กม. / 2,971</td><td>114 (49→65)</td><td>24.25M (<strong>5.75%</strong>)</td><td>tree (high)</td></tr>
+          <tr><td>4</td><td><strong>LPG-F09</strong></td><td>ลำปาง / Rural</td><td>76.9 กม. / 2,870</td><td>135 (68→67)</td><td>23.83M (<strong>5.65%</strong>)</td><td>tree (high)</td></tr>
+          <tr><td>5</td><td><strong>CRI-F13</strong></td><td>เชียงราย / Rural</td><td>84.8 กม. / 2,328</td><td>118 (43→75)</td><td>23.02M (<strong>5.46%</strong>)</td><td>tree (high)</td></tr>
+        </tbody>
+      </table>
+      <div class="card warn"><p><strong>สัญญาณเตือนอุปกรณ์เก่า (`CMI-F14`):</strong> สายป้อนปี 1997 ไม่ติด Top 5 แต่เหตุอุปกรณ์ชำรุดพุ่ง <strong>5 → 19 ครั้ง (+280%)</strong> · ข้อจำกัด: 10 เหตุการณ์เป็นรหัส orphan ไม่อยู่ในตารางนี้</p></div>
+    </div>
+    <div class="footer"><span>ข้อค้นพบ · Q3 High-Priority Feeders</span><span>อัตราต้นไม้ high = 41.55 vs low = 4.58 ครั้ง/100 กม./ปี</span></div>
+  </section>
+
+  <!-- Slide 9 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">3. ข้อค้นพบ (Q5 &amp; Q6)</div><h2>พายุเพิ่มความเสี่ยง 2.35 เท่า และชนบทกู้คืนนานกว่าเมือง 2.8 เท่า</h2></div><div class="slide-num">9 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card">
+        <h3>Q5: สภาพอากาศกับความถี่ไฟดับ</h3>
+        <ul>
+          <li>วันมีพายุฟ้าคะนอง: <strong>1.73</strong> vs <strong>0.74</strong> ครั้ง/จังหวัด/วัน (<strong>2.35 เท่า</strong>)</li>
+          <li>ฝน &gt;35 มม.: เฉลี่ย <strong>2.25</strong> ครั้ง/วัน (3.2 เท่า), <code>r = 0.37</code></li>
+          <li>ลม &gt;45 กม./ชม.: เฉลี่ย <strong>2.82</strong> ครั้ง/วัน (3.8 เท่า)</li>
+          <li><em>ข้อจำกัด:</em> ข้อมูลอากาศเป็นระดับจังหวัดและขาด 25 วัน</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h3>Q6: เวลากู้คืน &amp; เวลาเดินทางทีมช่าง</h3>
+        <ul>
+          <li>มัธยฐานเวลาดับ: เมือง <strong>43.5</strong> | ชานเมือง <strong>73.0</strong> | ชนบท <strong>122.0</strong> น.</li>
+          <li>เวลาเดินทางช่าง: เมือง <strong>18</strong> | ชานเมือง <strong>28</strong> | ชนบท <strong>49</strong> น.</li>
+          <li>สัดส่วนเดินทาง: <strong>34.7%–39.1%</strong> ของเวลาดับ (slope <code>+3.23</code>)</li>
+          <li><em>ข้อจำกัด:</em> ขาด crew_arrival 135 แถว และมี 405 แถวที่กู้อัตโนมัติก่อนช่างถึง</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>ข้อค้นพบ · Q5 &amp; Q6</span><span>ช่วงเวลา: 2566–2567</span></div>
+  </section>
+
+  <!-- Slide 10 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">4. ข้อเสนอแนะ (Q7)</div><h2>พอร์ต 3 โครงการปี 2568 คาดการณ์ลด SAIDI -319.37 นาที (-27.63%)</h2></div><div class="slide-num">10 / 12</div></div>
+    <div class="content cols-3">
+      <div class="card good">
+        <h3>P1 · จัดการต้นไม้ Top 5</h3>
+        <div class="big-num green">-227.8 น.</div>
+        <p style="margin-top:8px;">ตัดแต่งกิ่งไม้ก่อนฤดูฝน (มี.ค.–เม.ย.) + สายหุ้มฉนวนบน CRI-F11, F03, F04, F13, LPG-F09 (ลดเหตุต้นไม้ 65% = 71.3% ของผลลด)</p>
+      </div>
+      <div class="card accent">
+        <h3>P2 · ช่างส่วนหน้าเชียงราย</h3>
+        <div class="big-num">-35.8 น.</div>
+        <p style="margin-top:8px;">ตั้งจุดเตรียมทีมช่างในชนบทเชียงราย + แผนรับมือพายุ ลดเวลาเดินทาง/กู้คืน 20 นาที/ครั้ง (11.2% ของผลลด)</p>
+      </div>
+      <div class="card">
+        <h3>P3 · อุปกรณ์ &amp; กันสัตว์</h3>
+        <div class="big-num" style="color:#f59e0b;">-55.7 น.</div>
+        <p style="margin-top:8px;">เปลี่ยนอุปกรณ์เร่งด่วน CMI-F14/สายเสี่ยง (ลด 70%) + ติดกันสัตว์ช่วงเช้า (ลด 50% = 17.4% ของผลลด)</p>
+      </div>
+    </div>
+    <div class="card"><p><strong>ผลลัพธ์รวม:</strong> ลด SAIDI ฐานปี 2567 จาก <strong>1,155.79 → 836.43 นาที/ราย/ปี</strong> · <em>ข้อจำกัด:</em> จำลองบนข้อมูลปี 2567 และยังไม่มีต้นทุน CAPEX/OPEX</p></div>
+    <div class="footer"><span>ข้อเสนอแนะ · 3 โครงการเชิงกลยุทธ์</span><span>src/eda_analysis.py</span></div>
+  </section>
+
+  <!-- Slide 11 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">4. ระบบส่งมอบ (Missions C, D, F)</div><h2>Web Dashboard พร้อมใช้จริง เร็วกว่าเกณฑ์ (&lt; 0.3 วินาที)</h2></div><div class="slide-num">11 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card">
+        <h3>ฟีเจอร์สำหรับผู้บริหาร (C &amp; D)</h3>
+        <ul>
+          <li><strong>Storytelling:</strong> What → So What → Now What + ข้อจำกัดใต้กราฟหลักทุกตัว</li>
+          <li><strong>5D Filters + Storm Toggle:</strong> กรองปี จังหวัด พื้นที่ สายป้อน สาเหตุ</li>
+          <li><strong>Export &amp; States:</strong> ส่งออก CSV/PDF พร้อม Loading/Empty/Error States</li>
+          <li><strong>Test Account:</strong> <code>judge@lannapower.co.th</code> / <code>Lanna2025!</code></li>
+        </ul>
+      </div>
+      <div class="card good">
+        <h3>ผลวัดประสิทธิภาพ (Mission F)</h3>
+        <div class="big-num green">157.6 ms</div>
+        <p style="margin-top:8px;">First Load JS = <strong>277 KB</strong> (Next.js 14 Static Export), Local Static HTTP = <strong>0.158 วินาที</strong>, Filter Latency &lt; <strong>10 ms</strong> ผ่าน Python Pre-aggregation + Memoized Filtering</p>
+      </div>
+    </div>
+    <div class="footer"><span>เว็บแดชบอร์ด &amp; ประสิทธิภาพ</span><span>web/out + Dockerfile + scripts/run_local.ps1</span></div>
+  </section>
+
+  <!-- Slide 12 -->
+  <section class="slide">
+    <div class="slide-header"><div><div class="slide-tag">4. แผนดำเนินการปี 2568</div><h2>Roadmap ไตรมาส 1–4 และแนวทางกำกับดูแลข้อมูล</h2></div><div class="slide-num">12 / 12</div></div>
+    <div class="content cols-2">
+      <div class="card accent">
+        <h3>Action Plan ปี 2568</h3>
+        <ul>
+          <li><strong>Q1 (ม.ค.–มี.ค.):</strong> จัดซื้อ/เปลี่ยนอุปกรณ์ <code>CMI-F14</code> และเร่งตัดแต่งกิ่งไม้ Top 5 สายป้อนให้เสร็จก่อนเมษายน</li>
+          <li><strong>Q2 (เม.ย.–มิ.ย.):</strong> ตั้งจุดทีมช่างส่วนหน้าเชียงราย + ติดอุปกรณ์กันสัตว์ช่วงเช้า</li>
+          <li><strong>Q3–Q4 (ก.ค.–ธ.ค.):</strong> เชื่อมระบบเตือนภัยพายุกรมอุตุฯ และติดตาม SAIDI รายเดือนเทียบเป้า 836 นาที</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>การยกระดับคุณภาพข้อมูลต้นทาง</h3>
+        <ul>
+          <li>กำหนด Master Incident ID ร่วมระหว่าง SCADA &amp; Call Center</li>
+          <li>บังคับ ISO-8601 และหน่วยมาตรฐาน (นาที / กม. / °C)</li>
+          <li>จัดเก็บ As-of-Year Customer Snapshot ลดความคลาดเคลื่อนตัวหาร SAIFI/SAIDI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>ขอบคุณคณะกรรมการ — พร้อมรับคำถามและสาธิตระบบจริง</span><span>Slide 12 / 12</span></div>
+  </section>
+</body>
+</html>

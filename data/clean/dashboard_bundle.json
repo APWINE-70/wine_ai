@@ -1,0 +1,656 @@
+{
+  "data_cutoff": "2024-12-31 23:59",
+  "reliability": {
+    "total_customers_served_imputed": 214266,
+    "total_customers_served_raw_non_null": 204615,
+    "planned_outages_excluded_counts": {
+      "2023": 65,
+      "2024": 84
+    },
+    "scenarios": {
+      "raw_uncleaned_unplanned": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 561207.8,
+          "total_customers_affected": 1417590,
+          "total_customer_minutes": 593085149.0,
+          "total_customers_served": 204615,
+          "saifi": 6.9281,
+          "saidi": 2898.5419,
+          "caidi": 418.3757
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1414,
+          "total_duration_min": 453393.3,
+          "total_customers_affected": 1704116,
+          "total_customer_minutes": 456871209.3,
+          "total_customers_served": 204615,
+          "saifi": 8.3284,
+          "saidi": 2232.8334,
+          "caidi": 268.0987
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 234,
+          "outage_count_pct": 19.83,
+          "saifi_delta": 1.4003,
+          "saifi_pct": 20.21,
+          "saidi_delta": -665.7085,
+          "saidi_pct": -22.97,
+          "caidi_delta": -150.277
+        }
+      },
+      "clean_imputed_all_unplanned": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 173146.5,
+          "total_customers_affected": 1353792,
+          "total_customer_minutes": 175056554.5,
+          "total_customers_served": 214266,
+          "saifi": 6.3183,
+          "saidi": 817.0058,
+          "caidi": 129.3083
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1414,
+          "total_duration_min": 250370.0,
+          "total_customers_affected": 1639437,
+          "total_customer_minutes": 247647478.0,
+          "total_customers_served": 214266,
+          "saifi": 7.6514,
+          "saidi": 1155.7946,
+          "caidi": 151.0564
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 234,
+          "outage_count_pct": 19.83,
+          "saifi_delta": 1.3331,
+          "saifi_pct": 21.1,
+          "saidi_delta": 338.7888,
+          "saidi_pct": 41.47,
+          "caidi_delta": 21.7481
+        }
+      },
+      "strict_clean": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1145,
+          "total_duration_min": 168096.0,
+          "total_customers_affected": 1315814,
+          "total_customer_minutes": 170385521.0,
+          "total_customers_served": 214266,
+          "saifi": 6.141,
+          "saidi": 795.2056,
+          "caidi": 129.4906
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1375,
+          "total_duration_min": 242744.0,
+          "total_customers_affected": 1595154,
+          "total_customer_minutes": 239966650.0,
+          "total_customers_served": 214266,
+          "saifi": 7.4447,
+          "saidi": 1119.9474,
+          "caidi": 150.4348
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 230,
+          "outage_count_pct": 20.09,
+          "saifi_delta": 1.3037,
+          "saifi_pct": 21.23,
+          "saidi_delta": 324.7418,
+          "saidi_pct": 40.84,
+          "caidi_delta": 20.9442
+        }
+      },
+      "clean_imputed_without_chiang_rai_storm": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 173146.5,
+          "total_customers_affected": 1353792,
+          "total_customer_minutes": 175056554.5,
+          "total_customers_served": 214266,
+          "saifi": 6.3183,
+          "saidi": 817.0058,
+          "caidi": 129.3083
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1335,
+          "total_duration_min": 188528.0,
+          "total_customers_affected": 1564351,
+          "total_customer_minutes": 192269066.0,
+          "total_customers_served": 214266,
+          "saifi": 7.301,
+          "saidi": 897.3382,
+          "caidi": 122.9066
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 155,
+          "outage_count_pct": 13.14,
+          "saifi_delta": 0.9827,
+          "saifi_pct": 15.55,
+          "saidi_delta": 80.3324,
+          "saidi_pct": 9.83,
+          "caidi_delta": -6.4017
+        }
+      },
+      "strict_without_extremes": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1130,
+          "total_duration_min": 154639.0,
+          "total_customers_affected": 1302776,
+          "total_customer_minutes": 159060607.0,
+          "total_customers_served": 214266,
+          "saifi": 6.0802,
+          "saidi": 742.3511,
+          "caidi": 122.0936
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1329,
+          "total_duration_min": 186381.0,
+          "total_customers_affected": 1557999,
+          "total_customer_minutes": 192899691.0,
+          "total_customers_served": 214266,
+          "saifi": 7.2713,
+          "saidi": 900.2814,
+          "caidi": 123.8125
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 199,
+          "outage_count_pct": 17.61,
+          "saifi_delta": 1.1911,
+          "saifi_pct": 19.59,
+          "saidi_delta": 157.9303,
+          "saidi_pct": 21.27,
+          "caidi_delta": 1.7189
+        }
+      }
+    }
+  },
+  "by_cause": [
+    {
+      "cause": "tree",
+      "outage_count": 1121,
+      "total_duration_min": 269796.5,
+      "total_customer_minutes": 235523192.5
+    },
+    {
+      "cause": "equipment",
+      "outage_count": 283,
+      "total_duration_min": 52621.0,
+      "total_customer_minutes": 70367796.0
+    },
+    {
+      "cause": "lightning",
+      "outage_count": 221,
+      "total_duration_min": 23351.0,
+      "total_customer_minutes": 34752341.0
+    },
+    {
+      "cause": "vehicle",
+      "outage_count": 99,
+      "total_duration_min": 20182.0,
+      "total_customer_minutes": 26691686.0
+    },
+    {
+      "cause": "animal",
+      "outage_count": 538,
+      "total_duration_min": 37971.0,
+      "total_customer_minutes": 23697356.0
+    },
+    {
+      "cause": "unknown",
+      "outage_count": 234,
+      "total_duration_min": 14366.0,
+      "total_customer_minutes": 22083310.0
+    },
+    {
+      "cause": "overload",
+      "outage_count": 98,
+      "total_duration_min": 5229.0,
+      "total_customer_minutes": 9588351.0
+    }
+  ],
+  "by_feeder": [
+    {
+      "feeder_id": "CRI-F11",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 155,
+      "total_duration_min": 39461.0,
+      "total_customer_minutes": 39411384.0
+    },
+    {
+      "feeder_id": "CRI-F03",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 103,
+      "total_duration_min": 29067.0,
+      "total_customer_minutes": 26613531.0
+    },
+    {
+      "feeder_id": "CRI-F04",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 114,
+      "total_duration_min": 24114.0,
+      "total_customer_minutes": 24247519.0
+    },
+    {
+      "feeder_id": "LPG-F09",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 135,
+      "total_duration_min": 24619.0,
+      "total_customer_minutes": 23832468.0
+    },
+    {
+      "feeder_id": "CRI-F13",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 118,
+      "total_duration_min": 26980.0,
+      "total_customer_minutes": 23019863.0
+    },
+    {
+      "feeder_id": "CRI-F10",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 93,
+      "total_duration_min": 22948.0,
+      "total_customer_minutes": 20144455.0
+    },
+    {
+      "feeder_id": "CMI-F10",
+      "province": "เชียงใหม่",
+      "area_type": "Rural",
+      "outage_count": 98,
+      "total_duration_min": 19039.0,
+      "total_customer_minutes": 18535622.0
+    },
+    {
+      "feeder_id": "CRI-F12",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 77,
+      "total_duration_min": 15065.5,
+      "total_customer_minutes": 17761266.5
+    },
+    {
+      "feeder_id": "LPG-F12",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 80,
+      "total_duration_min": 12595.0,
+      "total_customer_minutes": 11009540.0
+    },
+    {
+      "feeder_id": "LPG-F07",
+      "province": "ลำปาง",
+      "area_type": "Urban",
+      "outage_count": 35,
+      "total_duration_min": 3048.0,
+      "total_customer_minutes": 9762087.0
+    },
+    {
+      "feeder_id": "CMI-F20",
+      "province": "เชียงใหม่",
+      "area_type": "Rural",
+      "outage_count": 70,
+      "total_duration_min": 8641.0,
+      "total_customer_minutes": 9720406.0
+    },
+    {
+      "feeder_id": "LPG-F11",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 72,
+      "total_duration_min": 13566.0,
+      "total_customer_minutes": 9634466.0
+    },
+    {
+      "feeder_id": "LPG-F08",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 67,
+      "total_duration_min": 9340.0,
+      "total_customer_minutes": 8686550.0
+    },
+    {
+      "feeder_id": "CRI-F07",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 55,
+      "total_duration_min": 8749.0,
+      "total_customer_minutes": 8156968.0
+    },
+    {
+      "feeder_id": "LPN-F06",
+      "province": "ลำพูน",
+      "area_type": "Suburban",
+      "outage_count": 38,
+      "total_duration_min": 3871.0,
+      "total_customer_minutes": 7879987.0
+    },
+    {
+      "feeder_id": "LPG-F10",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 84,
+      "total_duration_min": 13497.0,
+      "total_customer_minutes": 7624910.0
+    },
+    {
+      "feeder_id": "CRI-F05",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 43,
+      "total_duration_min": 7081.0,
+      "total_customer_minutes": 7560248.0
+    },
+    {
+      "feeder_id": "LPG-F05",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 60,
+      "total_duration_min": 9827.0,
+      "total_customer_minutes": 6471530.0
+    },
+    {
+      "feeder_id": "CRI-F01",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 52,
+      "total_duration_min": 11609.0,
+      "total_customer_minutes": 6377932.0
+    },
+    {
+      "feeder_id": "LPG-F01",
+      "province": "ลำปาง",
+      "area_type": "Suburban",
+      "outage_count": 28,
+      "total_duration_min": 4078.0,
+      "total_customer_minutes": 6088482.0
+    },
+    {
+      "feeder_id": "LPN-F07",
+      "province": "ลำพูน",
+      "area_type": "Rural",
+      "outage_count": 77,
+      "total_duration_min": 12966.0,
+      "total_customer_minutes": 5798648.0
+    },
+    {
+      "feeder_id": "CMI-F14",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 32,
+      "total_duration_min": 3707.0,
+      "total_customer_minutes": 5796071.0
+    },
+    {
+      "feeder_id": "CRI-F06",
+      "province": "เชียงราย",
+      "area_type": "Suburban",
+      "outage_count": 27,
+      "total_duration_min": 3967.0,
+      "total_customer_minutes": 5715535.0
+    },
+    {
+      "feeder_id": "CMI-F06",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 24,
+      "total_duration_min": 2115.0,
+      "total_customer_minutes": 5692360.0
+    },
+    {
+      "feeder_id": "LPN-F05",
+      "province": "ลำพูน",
+      "area_type": "Rural",
+      "outage_count": 53,
+      "total_duration_min": 6380.0,
+      "total_customer_minutes": 5431088.0
+    },
+    {
+      "feeder_id": "CMI-F17",
+      "province": "เชียงใหม่",
+      "area_type": "Rural",
+      "outage_count": 58,
+      "total_duration_min": 9667.0,
+      "total_customer_minutes": 5122320.0
+    },
+    {
+      "feeder_id": "LPN-F08",
+      "province": "ลำพูน",
+      "area_type": "Suburban",
+      "outage_count": 36,
+      "total_duration_min": 3078.0,
+      "total_customer_minutes": 4907153.0
+    },
+    {
+      "feeder_id": "CMI-F07",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 22,
+      "total_duration_min": 1743.0,
+      "total_customer_minutes": 4882955.0
+    },
+    {
+      "feeder_id": "LPG-F03",
+      "province": "ลำปาง",
+      "area_type": "Rural",
+      "outage_count": 31,
+      "total_duration_min": 4148.0,
+      "total_customer_minutes": 4880547.0
+    },
+    {
+      "feeder_id": "CMI-F18",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 23,
+      "total_duration_min": 3086.0,
+      "total_customer_minutes": 4866484.0
+    },
+    {
+      "feeder_id": "CRI-F08",
+      "province": "เชียงราย",
+      "area_type": "Urban",
+      "outage_count": 21,
+      "total_duration_min": 1566.0,
+      "total_customer_minutes": 4296951.0
+    },
+    {
+      "feeder_id": "CRI-F02",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 92,
+      "total_duration_min": 14003.0,
+      "total_customer_minutes": 4277117.0
+    },
+    {
+      "feeder_id": "CRI-F09",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 29,
+      "total_duration_min": 4442.5,
+      "total_customer_minutes": 4125011.5
+    },
+    {
+      "feeder_id": "LPG-F06",
+      "province": "ลำปาง",
+      "area_type": "Urban",
+      "outage_count": 25,
+      "total_duration_min": 1488.0,
+      "total_customer_minutes": 4003844.0
+    },
+    {
+      "feeder_id": "CMI-F01",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 13,
+      "total_duration_min": 1017.0,
+      "total_customer_minutes": 3797064.0
+    },
+    {
+      "feeder_id": "CMI-F15",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 23,
+      "total_duration_min": 2326.0,
+      "total_customer_minutes": 3793097.0
+    },
+    {
+      "feeder_id": "CMI-F19",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 21,
+      "total_duration_min": 2524.0,
+      "total_customer_minutes": 3774832.0
+    },
+    {
+      "feeder_id": "LPN-F04",
+      "province": "ลำพูน",
+      "area_type": "Suburban",
+      "outage_count": 25,
+      "total_duration_min": 2169.0,
+      "total_customer_minutes": 3466539.0
+    },
+    {
+      "feeder_id": "CMI-F04",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 25,
+      "total_duration_min": 1950.0,
+      "total_customer_minutes": 3304156.0
+    },
+    {
+      "feeder_id": "LPN-F03",
+      "province": "ลำพูน",
+      "area_type": "Suburban",
+      "outage_count": 12,
+      "total_duration_min": 1638.0,
+      "total_customer_minutes": 3279687.0
+    },
+    {
+      "feeder_id": "LPN-F01",
+      "province": "ลำพูน",
+      "area_type": "Suburban",
+      "outage_count": 38,
+      "total_duration_min": 3253.0,
+      "total_customer_minutes": 3278417.0
+    },
+    {
+      "feeder_id": "CMI-F09",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 23,
+      "total_duration_min": 2638.0,
+      "total_customer_minutes": 3250718.0
+    },
+    {
+      "feeder_id": "CMI-F16",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 28,
+      "total_duration_min": 3068.0,
+      "total_customer_minutes": 3237909.0
+    },
+    {
+      "feeder_id": "LPN-F02",
+      "province": "ลำพูน",
+      "area_type": "Urban",
+      "outage_count": 30,
+      "total_duration_min": 2203.0,
+      "total_customer_minutes": 3055609.0
+    },
+    {
+      "feeder_id": "CMI-F08",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 25,
+      "total_duration_min": 1997.5,
+      "total_customer_minutes": 3043148.5
+    },
+    {
+      "feeder_id": "LPG-F04",
+      "province": "ลำปาง",
+      "area_type": "Suburban",
+      "outage_count": 27,
+      "total_duration_min": 3201.0,
+      "total_customer_minutes": 3032550.0
+    },
+    {
+      "feeder_id": "LPG-F02",
+      "province": "ลำปาง",
+      "area_type": "Suburban",
+      "outage_count": 19,
+      "total_duration_min": 1544.0,
+      "total_customer_minutes": 2801104.0
+    },
+    {
+      "feeder_id": "CMI-F11",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 17,
+      "total_duration_min": 1208.0,
+      "total_customer_minutes": 2767640.0
+    },
+    {
+      "feeder_id": "CMI-F03",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 18,
+      "total_duration_min": 864.0,
+      "total_customer_minutes": 2569671.0
+    },
+    {
+      "feeder_id": "CRI-F14",
+      "province": "เชียงราย",
+      "area_type": "Rural",
+      "outage_count": 51,
+      "total_duration_min": 6881.0,
+      "total_customer_minutes": 2563912.0
+    },
+    {
+      "feeder_id": "CMI-F13",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 17,
+      "total_duration_min": 1229.0,
+      "total_customer_minutes": 2493897.0
+    },
+    {
+      "feeder_id": "CMI-F05",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 14,
+      "total_duration_min": 793.0,
+      "total_customer_minutes": 2340408.0
+    },
+    {
+      "feeder_id": "CMI-F12",
+      "province": "เชียงใหม่",
+      "area_type": "Suburban",
+      "outage_count": 15,
+      "total_duration_min": 1204.0,
+      "total_customer_minutes": 2195019.0
+    },
+    {
+      "feeder_id": "CMI-F02",
+      "province": "เชียงใหม่",
+      "area_type": "Urban",
+      "outage_count": 16,
+      "total_duration_min": 577.0,
+      "total_customer_minutes": 1386895.0
+    }
+  ]
+}

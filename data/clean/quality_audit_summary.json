@@ -1,0 +1,154 @@
+{
+  "completeness": {
+    "row_counts_raw": {
+      "outages_raw": 2843,
+      "feeders": 55,
+      "substations": 8,
+      "weather_daily": 2899
+    },
+    "missing_values_by_table": {
+      "outages_raw": {
+        "end_time": 91,
+        "duration_min": 116,
+        "customers_affected": 70,
+        "cause": 74,
+        "crew_arrival_min": 288
+      },
+      "feeders": {
+        "customers_served": 2
+      },
+      "substations": {},
+      "weather_daily": {}
+    },
+    "outages_missing_both_end_and_duration": 3,
+    "weather_expected_province_days": 2924,
+    "weather_observed_unique_province_days": 2899,
+    "weather_missing_province_days": 25
+  },
+  "accuracy": {
+    "outages_unparseable_start_time": 0,
+    "outages_unparseable_end_time": 0,
+    "outages_swapped_start_end": 14,
+    "outages_negative_duration": 13,
+    "outages_duration_in_hours": 42,
+    "outages_placeholder_duration_ge_9999": 8,
+    "outages_negative_or_zero_customers": 0,
+    "outages_customers_exceed_feeder_total": 16,
+    "outages_negative_crew_arrival": 8,
+    "outages_extreme_duration_gt_3x_iqr": 55,
+    "outages_duration_3x_iqr_fence_min": 665.0,
+    "feeders_length_in_metres_gt_1000": 4,
+    "feeders_invalid_overhead_pct": 0,
+    "weather_rainfall_sentinel_negative": 40,
+    "weather_temp_fahrenheit_gt_50c": 60,
+    "weather_negative_wind": 0,
+    "weather_unparseable_thunderstorm": 0
+  },
+  "consistency": {
+    "exact_duplicate_outage_rows": 68,
+    "duplicate_outage_id_rows": 68,
+    "business_key_duplicate_rows": 32,
+    "feeder_id_format_nonstandard_rows": 111,
+    "customers_comma_string_rows": 149,
+    "exact_duplicate_feeder_rows": 1,
+    "duplicate_feeder_id_rows": 1,
+    "duplicate_substation_id_rows": 0,
+    "duplicate_weather_date_province_rows": 0,
+    "orphan_outage_feeder_ids_after_norm": 10,
+    "orphan_feeder_substation_ids": 0,
+    "substations_capacity_mva_text_rows": 1,
+    "buddhist_era_dates_detected": {
+      "outages_start_time": 254,
+      "outages_end_time": 246,
+      "weather_date": 0,
+      "feeders_install_year": 0,
+      "substations_commissioned_year": 0
+    },
+    "text_variants_detected": {
+      "outages_cause": {
+        "animal": [
+          "Animal",
+          "งูพันสาย",
+          "นก/กระรอก",
+          "สัตว์"
+        ],
+        "equipment": [
+          "Equipment failure",
+          "ลูกถ้วยแตก",
+          "หม้อแปลงชำรุด",
+          "อุปกรณ์ชำรุด"
+        ],
+        "lightning": [
+          "Lightning",
+          "ฟ้าผ่า",
+          "ฟ้าผ่าสาย"
+        ],
+        "overload": [
+          "Overload",
+          "โหลดเกิน",
+          "ไฟเกิน"
+        ],
+        "planned": [
+          "Planned work",
+          "ดับไฟตามแผน",
+          "ปฏิบัติงานตามแผน"
+        ],
+        "tree": [
+          "Tree",
+          "tree contact",
+          "กิ่งไม้พาดสาย",
+          "ต้นไม้",
+          "ต้นไม้ล้มทับสาย"
+        ],
+        "unknown": [
+          "Unknown",
+          "ไม่ทราบสาเหตุ"
+        ],
+        "vehicle": [
+          "Vehicle",
+          "รถชนเสา"
+        ]
+      },
+      "outages_type": {
+        "Planned": [
+          "Planned",
+          "planned",
+          "ตามแผน"
+        ],
+        "Unplanned": [
+          "UNPLANNED",
+          "Unplanned",
+          "unplanned",
+          "ไม่ได้วางแผน"
+        ]
+      },
+      "outages_report_channel": {},
+      "feeders_area_type": {
+        "Rural": [
+          "RURAL",
+          "Rural",
+          "rural",
+          "ชนบท"
+        ],
+        "Suburban": [
+          "Suburban",
+          "suburban",
+          "ชานเมือง"
+        ],
+        "Urban": [
+          "Urban",
+          "urban"
+        ]
+      },
+      "weather_province": {},
+      "substations_province": {}
+    }
+  },
+  "timeliness": {
+    "outages_start_before_window": 3,
+    "outages_start_after_window": 2,
+    "weather_date_outside_window": 0,
+    "feeders_installed_after_2024": 0,
+    "substations_commissioned_after_2024": 0
+  }
+}

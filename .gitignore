@@ -1,0 +1,21 @@
+# Python environments & caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node / Web build artifacts
+node_modules/
+web/.next/
+web/out/
+web/dist/
+web/.vite/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+
+# Generated submission archives (keep source & data directories)
+*.zip

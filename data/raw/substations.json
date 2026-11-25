@@ -1,0 +1,82 @@
+[
+  {
+    "substation_id": "SS-CMI-01",
+    "substation_name": "สถานีไฟฟ้าเชียงใหม่ 1 (เมือง)",
+    "capacity_mva": 115,
+    "commissioned_year": 1995,
+    "location": {
+      "province": "เชียงใหม่",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-CMI-02",
+    "substation_name": "สถานีไฟฟ้าสันทราย",
+    "capacity_mva": 75,
+    "commissioned_year": 2004,
+    "location": {
+      "province": "เชียงใหม่",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-CMI-03",
+    "substation_name": "สถานีไฟฟ้าแม่ริม",
+    "capacity_mva": 50,
+    "commissioned_year": 2010,
+    "location": {
+      "province": "เชียงใหม่",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-LPN-01",
+    "substation_name": "สถานีไฟฟ้าลำพูน",
+    "capacity_mva": "75 MVA",
+    "commissioned_year": 1999,
+    "location": {
+      "province": "ลำพูน",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-LPG-01",
+    "substation_name": "สถานีไฟฟ้าลำปาง 1",
+    "capacity_mva": 75,
+    "commissioned_year": 1998,
+    "location": {
+      "province": "ลำปาง",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-LPG-02",
+    "substation_name": "สถานีไฟฟ้าเกาะคา",
+    "capacity_mva": 50,
+    "commissioned_year": 2012,
+    "location": {
+      "province": "ลำปาง",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-CRI-01",
+    "substation_name": "สถานีไฟฟ้าเชียงราย 1",
+    "capacity_mva": 75,
+    "commissioned_year": 2001,
+    "location": {
+      "province": "เชียงราย",
+      "region": "ภาคเหนือ"
+    }
+  },
+  {
+    "substation_id": "SS-CRI-02",
+    "substation_name": "สถานีไฟฟ้าแม่สาย",
+    "capacity_mva": 50,
+    "commissioned_year": 2015,
+    "location": {
+      "province": "เชียงราย",
+      "region": "ภาคเหนือ"
+    }
+  }
+]

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>คู่มือการใช้งานแดชบอร์ด 1 หน้า — Lanna Power Reliability</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Leelawadee UI", "Tahoma", "Noto Sans Thai", sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 190mm;
+      min-height: 274mm;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero h1 { font-size: 18px; font-weight: 700; }
+    .hero p { font-size: 11px; color: #bae6fd; margin-top: 3px; }
+    .badge {
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 10.5px;
+      text-align: right;
+      line-height: 1.45;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #ffffff;
+    }
+    .card-soft { background: #f8fafc; }
+    .section-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0369a1;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .num {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0284c7;
+      color: #fff;
+      font-size: 10px;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    p, li { font-size: 10.5px; line-height: 1.48; color: #334155; }
+    ul { padding-left: 15px; }
+    .cred-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin-top: 6px;
+      font-size: 10.5px;
+    }
+    .mono { font-family: Consolas, monospace; font-weight: 700; color: #0f172a; }
+    .tab-card {
+      border: 1px solid #cbd5e1;
+      border-top: 3px solid #0284c7;
+      border-radius: 8px;
+      padding: 8px 9px;
+      background: #f8fafc;
+    }
+    .tab-card h3 { font-size: 11px; color: #0f172a; margin-bottom: 3px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .kpi-box {
+      border-radius: 8px;
+      padding: 8px 10px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+    .kpi-box strong { font-size: 11.5px; color: #0f172a; display: block; }
+    .kpi-box span { font-size: 10px; color: #475569; }
+    .highlight-bar {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 10.5px;
+      color: #78350f;
+    }
+    .footer {
+      margin-top: auto;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.5px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <h1>คู่มือการใช้งานเว็บแดชบอร์ด 1 หน้า (Quick User Manual)</h1>
+        <p>บริษัท ล้านนาพาวเวอร์ดิสทริบิวชัน จำกัด · ระบบวิเคราะห์ไฟฟ้าดับ 4 จังหวัดภาคเหนือ (ปี 2566–2567)</p>
+      </div>
+      <div class="badge">
+        <div><strong>ข้อมูลถึง:</strong> 2024-12-31 23:59</div>
+        <div><strong>ทะเบียนสายป้อน:</strong> 2025-01-05</div>
+      </div>
+    </header>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="section-title"><span class="num">1</span> การเข้าสู่ระบบและบัญชีทดสอบกรรมการ</div>
+        <p>เปิดเว็บไซต์ผ่าน URL ออนไลน์ หรือรันเวอร์ชันสำรองบนเครื่องด้วย <code>scripts\run_local.ps1</code> / Docker</p>
+        <div class="cred-box">
+          <div><strong>Email:</strong> <span class="mono">judge@lannapower.co.th</span></div>
+          <div><strong>Password:</strong> <span class="mono">Lanna2025!</span> <em>(ระบบกรอกให้อัตโนมัติ กดเข้าสู่ระบบได้ทันที)</em></div>
+          <div style="margin-top:3px;"><strong>Local Fallback:</strong> <span class="mono">http://127.0.0.1:3000</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><span class="num">2</span> แถบควบคุมตัวกรอง 5 มิติ &amp; การส่งออก (Export)</div>
+        <ul>
+          <li><strong>ตัวกรอง 5 มิติ:</strong> ปี (2566/2567), จังหวัด (4 จังหวัด), พื้นที่ (เมือง/ชานเมือง/ชนบท), สายป้อน (54 สาย), สาเหตุ (7 กลุ่ม)</li>
+          <li><strong>ปุ่มสลับพายุ ส.ค.67:</strong> เปิด/ปิดเหตุการณ์พายุเชียงราย 22–23 ส.ค. 2567 (79 ครั้ง) เพื่อดูแนวโน้มฐานปกติ</li>
+          <li><strong>Export CSV / PDF:</strong> มุมขวาบนและหน้า Drill-down (CSV รองรับภาษาไทย UTF-8 BOM, PDF พิมพ์รายงานอัตโนมัติ)</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card card-soft">
+      <div class="section-title"><span class="num">3</span> โครงสร้าง 4 หน้าจอหลัก (Executive Flow)</div>
+      <div class="grid-4">
+        <div class="tab-card">
+          <h3>A. Overview (KPI)</h3>
+          <p>สรุป KPI หลัก 5 ตัว, กราฟ YoY 2566–2567, Pareto สาเหตุ, แนวโน้มรายเดือน และ Heatmap 24×7 พร้อม <strong>What→So What→Now What</strong></p>
+        </div>
+        <div class="tab-card">
+          <h3>B. เจาะลึกรายสายป้อน</h3>
+          <p>Top 10 สายป้อน (คลิกกรองได้), แจ้งเตือนสายเก่า <strong>CMI-F14 (+280%)</strong>, สภาพอากาศ, เวลากู้คืน และตาราง 54 สายป้อน</p>
+        </div>
+        <div class="tab-card">
+          <h3>C. ข้อเสนอ 3 โครงการ</h3>
+          <p>จำลองการลงทุนปี 2568 (P1–P3) ลด SAIDI จาก <strong>1,155.79 → 836.43 นาที (-27.63%)</strong> พร้อมสมมติฐานชัดเจน</p>
+        </div>
+        <div class="tab-card">
+          <h3>D. About &amp; Performance</h3>
+          <p>แสดงผลวัดความเร็ว <strong>First Load &amp; Filter (ms)</strong> สด, ตารางก่อน–หลังคลีน, และปุ่มทดสอบ Loading / Error State</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">4</span> นิยามดัชนีความน่าเชื่อถือและตัวเลขอ้างอิงหลัก (เฉพาะ Unplanned 2,594 ครั้ง)</div>
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <strong>SAIFI (ความถี่ไฟดับเฉลี่ย)</strong>
+          <span>∑ customers_affected ÷ 214,266 ราย<br/>ปี 2566 = <b>6.32</b> · ปี 2567 = <b>7.65</b> (+21.1%)</span>
+        </div>
+        <div class="kpi-box">
+          <strong>SAIDI (เวลาไม่มีไฟเฉลี่ย)</strong>
+          <span>∑ (affected × duration) ÷ 214,266 ราย<br/>ปี 2566 = <b>817.01</b> · ปี 2567 = <b>1,155.79</b> นาที</span>
+        </div>
+        <div class="kpi-box">
+          <strong>CAIDI (เวลากู้คืนเฉลี่ย/ครั้ง)</strong>
+          <span>SAIDI ÷ SAIFI (เวลารอมัธยฐาน 104 นาที)<br/>ปี 2566 = <b>129.31</b> · ปี 2567 = <b>151.06</b> นาที</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="highlight-bar">
+      <strong>หมายเหตุความโปร่งใสและข้อจำกัดของข้อมูล:</strong>
+      (1) ตัดเหตุการณ์ตามแผน (Planned) ออก 149 ครั้งตามกติกา (2) คงเหตุการณ์พายุเชียงราย 22–23 ส.ค. 2567 (79 ครั้ง = 22.36% ของ customer-minutes ปี 2567) ไว้ในชุดหลักและแยก Toggle ให้เทียบผลรวม/ไม่รวม (3) มี 10 เหตุการณ์รหัสสายป้อนกำพร้า (FK match 99.64%) และ 2 สายป้อนที่ประมาณค่าจำนวนลูกค้า (<code>CMI-F02</code>, <code>LPG-F12</code>)
+    </div>
+
+    <section class="card card-soft">
+      <div class="section-title"><span class="num">5</span> สรุปข้อค้นพบ &amp; 3 โครงการแนะนำปี 2568</div>
+      <div class="grid-2">
+        <ul>
+          <li><strong>สาเหตุอันดับ 1:</strong> ต้นไม้กิน <strong>55.72%</strong> ของความเสียหาย (43.22% ของครั้ง) ส่วนสัตว์เกิด 20.74% แต่มักดับสั้นช่วง 05:00–09:59 น.</li>
+          <li><strong>สายป้อน Top 5 (32.51% ของผลกระทบ):</strong> <code>CRI-F11</code>, <code>CRI-F03</code>, <code>CRI-F04</code>, <code>LPG-F09</code>, <code>CRI-F13</code> (สายชนบทยาว + ต้นไม้หนาแน่น)</li>
+        </ul>
+        <ul>
+          <li><strong>P1 (-227.82 น.):</strong> ตัดแต่งกิ่งไม้ก่อนฤดูฝน (มี.ค.–เม.ย.) + สายหุ้มฉนวนใน Top 5</li>
+          <li><strong>P2 (-35.84 น.) &amp; P3 (-55.71 น.):</strong> ทีมช่างส่วนหน้าชนบทเชียงราย + เปลี่ยนอุปกรณ์ <code>CMI-F14</code> และติดกันสัตว์</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Lanna Power Distribution Co., Ltd. · Data Analytics Competition</span>
+      <span>Built with Python 3.14 + Next.js 14 SSG + Recharts (First Load JS 277 KB)</span>
+    </footer>
+  </div>
+</body>
+</html>

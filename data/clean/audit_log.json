@@ -1,0 +1,148 @@
+{
+  "before_after": {
+    "outages": {
+      "raw_rows": 2843,
+      "clean_rows": 2743,
+      "strict_valid_rows": 2664,
+      "unplanned_clean_rows": 2594,
+      "planned_clean_rows": 149,
+      "orphan_feeder_rows": 10
+    },
+    "feeders": {
+      "raw_rows": 55,
+      "clean_rows": 54,
+      "customers_served_raw_sum": 204615,
+      "customers_served_imputed_sum": 214266
+    },
+    "substations": {
+      "raw_rows": 8,
+      "clean_rows": 8
+    },
+    "weather_daily": {
+      "raw_rows": 2899,
+      "clean_rows": 2899
+    }
+  },
+  "audit_events": [
+    {
+      "table": "substations",
+      "action": "strip_unit_from_capacity_mva",
+      "count": 1,
+      "reason": "Extracted numeric capacity_mva from unit strings such as '75 MVA'."
+    },
+    {
+      "table": "feeders",
+      "action": "drop_duplicate_pk",
+      "count": 1,
+      "reason": "Duplicate feeder_id (e.g. CMI-F18) kept first deterministic occurrence."
+    },
+    {
+      "table": "feeders",
+      "action": "convert_length_metres_to_km",
+      "count": 4,
+      "reason": "Divided feeder lengths > 1000 (entered in metres) by 1000 to obtain km."
+    },
+    {
+      "table": "feeders",
+      "action": "impute_missing_customers_served",
+      "count": 2,
+      "reason": "Imputed missing feeder customers_served with same area_type median (raw preserved)."
+    },
+    {
+      "table": "weather_daily",
+      "action": "convert_fahrenheit_to_celsius",
+      "count": 60,
+      "reason": "Converted max_temp_c > 50 (Fahrenheit readings) to Celsius."
+    },
+    {
+      "table": "weather_daily",
+      "action": "replace_negative_rainfall_sentinel_with_na",
+      "count": 40,
+      "reason": "Replaced negative rainfall sentinel (-999) with NaN to avoid biasing averages/correlations."
+    },
+    {
+      "table": "outages",
+      "action": "drop_exact_duplicate_rows",
+      "count": 68,
+      "reason": "Removed identical duplicate rows across all columns."
+    },
+    {
+      "table": "outages",
+      "action": "drop_duplicate_outage_id",
+      "count": 0,
+      "reason": "Removed duplicate outage_id keeping most complete row."
+    },
+    {
+      "table": "outages",
+      "action": "drop_business_key_duplicates",
+      "count": 32,
+      "reason": "Removed cross-channel duplicate incidents sharing (feeder_id, start_time)."
+    },
+    {
+      "table": "outages",
+      "action": "normalize_feeder_id_format",
+      "count": 108,
+      "reason": "Standardized feeder_id casing/hyphen/zero-padding to XXX-FNN."
+    },
+    {
+      "table": "outages",
+      "action": "normalize_buddhist_era_timestamps",
+      "count": 250,
+      "reason": "Converted dd/mm/YYYY Buddhist Era dates (>= 2400) to Gregorian."
+    },
+    {
+      "table": "outages",
+      "action": "repair_typo_years",
+      "count": 5,
+      "reason": "Repaired start_time typo years (2014/2042/2204) using outage_id / end_time year."
+    },
+    {
+      "table": "outages",
+      "action": "swap_reversed_timestamps",
+      "count": 13,
+      "reason": "Swapped start_time and end_time where end_time < start_time."
+    },
+    {
+      "table": "outages",
+      "action": "strip_placeholder_durations",
+      "count": 8,
+      "reason": "Replaced placeholder duration_min (>= 9999: 9999/99999/14400) with NaN / group median."
+    },
+    {
+      "table": "outages",
+      "action": "convert_duration_hours_to_minutes",
+      "count": 41,
+      "reason": "Replaced duration_min entered in hours with (end_time - start_time) in minutes."
+    },
+    {
+      "table": "outages",
+      "action": "recover_duration_from_timestamps",
+      "count": 107,
+      "reason": "Back-calculated missing duration_min from valid timestamps."
+    },
+    {
+      "table": "outages",
+      "action": "recover_end_time_from_duration",
+      "count": 79,
+      "reason": "Back-calculated missing end_time from start_time + duration_min."
+    },
+    {
+      "table": "outages",
+      "action": "replace_exaggerated_customers_exceeding_feeder",
+      "count": 16,
+      "reason": "Replaced impossible customers_affected > feeder.customers_served with feeder valid median (raw & capped preserved)."
+    },
+    {
+      "table": "outages",
+      "action": "clean_negative_crew_arrival",
+      "count": 8,
+      "reason": "Replaced negative crew_arrival_min with NaN."
+    },
+    {
+      "table": "outages",
+      "action": "flag_valid_extreme_events",
+      "count": 61,
+      "reason": "Flagged valid high-duration extreme events (> Q3 + 3*IQR = 664.00 min) without removing them."
+    }
+  ]
+}

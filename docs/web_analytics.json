@@ -1,0 +1,3281 @@
+{
+  "metadata": {
+    "data_cutoff": "2024-12-31 23:59",
+    "feeder_export_date": "2025-01-05",
+    "total_clean_events": 2743,
+    "unplanned_events": 2594,
+    "planned_events": 149,
+    "orphan_feeder_events": 10,
+    "total_customers_served_imputed": 214266,
+    "total_customers_served_raw_non_null": 204615
+  },
+  "distribution_stats_unplanned": {
+    "duration_min_imputed": {
+      "count": 2594,
+      "mean": 163.27,
+      "median": 104.0,
+      "iqr": 139.0,
+      "p90": 344.0,
+      "p95": 484.7,
+      "min": 2.0,
+      "max": 4159.0
+    },
+    "duration_min_strict": {
+      "count": 2520,
+      "mean": 163.03,
+      "median": 104.0,
+      "iqr": 139.0,
+      "p90": 344.2,
+      "p95": 479.25,
+      "min": 2.0,
+      "max": 4159.0
+    },
+    "customers_affected_imputed": {
+      "count": 2594,
+      "mean": 1153.9,
+      "median": 894.5,
+      "iqr": 1054.5,
+      "p90": 2346.9,
+      "p95": 2980.8,
+      "min": 2.0,
+      "max": 7593.0
+    },
+    "customers_affected_strict": {
+      "count": 2520,
+      "mean": 1155.15,
+      "median": 893.5,
+      "iqr": 1067.5,
+      "p90": 2349.3,
+      "p95": 2994.55,
+      "min": 2.0,
+      "max": 7593.0
+    },
+    "crew_arrival_min": {
+      "count": 2459,
+      "mean": 43.85,
+      "median": 41.0,
+      "iqr": 28.0,
+      "p90": 69.0,
+      "p95": 78.0,
+      "min": 5.0,
+      "max": 228.0
+    },
+    "extreme_event_count": 61
+  },
+  "q1_reliability_overview": {
+    "total_customers_served_imputed": 214266,
+    "total_customers_served_raw_non_null": 204615,
+    "planned_outages_excluded_counts": {
+      "2023": 65,
+      "2024": 84
+    },
+    "scenarios": {
+      "raw_uncleaned_unplanned": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 561207.8,
+          "total_customers_affected": 1417590,
+          "total_customer_minutes": 593085149.0,
+          "total_customers_served": 204615,
+          "saifi": 6.9281,
+          "saidi": 2898.5419,
+          "caidi": 418.3757
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1414,
+          "total_duration_min": 453393.3,
+          "total_customers_affected": 1704116,
+          "total_customer_minutes": 456871209.3,
+          "total_customers_served": 204615,
+          "saifi": 8.3284,
+          "saidi": 2232.8334,
+          "caidi": 268.0987
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 234,
+          "outage_count_pct": 19.83,
+          "saifi_delta": 1.4003,
+          "saifi_pct": 20.21,
+          "saidi_delta": -665.7085,
+          "saidi_pct": -22.97,
+          "caidi_delta": -150.277
+        }
+      },
+      "clean_imputed_all_unplanned": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 173146.5,
+          "total_customers_affected": 1353792,
+          "total_customer_minutes": 175056554.5,
+          "total_customers_served": 214266,
+          "saifi": 6.3183,
+          "saidi": 817.0058,
+          "caidi": 129.3083
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1414,
+          "total_duration_min": 250370.0,
+          "total_customers_affected": 1639437,
+          "total_customer_minutes": 247647478.0,
+          "total_customers_served": 214266,
+          "saifi": 7.6514,
+          "saidi": 1155.7946,
+          "caidi": 151.0564
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 234,
+          "outage_count_pct": 19.83,
+          "saifi_delta": 1.3331,
+          "saifi_pct": 21.1,
+          "saidi_delta": 338.7888,
+          "saidi_pct": 41.47,
+          "caidi_delta": 21.7481
+        }
+      },
+      "strict_clean": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1145,
+          "total_duration_min": 168096.0,
+          "total_customers_affected": 1315814,
+          "total_customer_minutes": 170385521.0,
+          "total_customers_served": 214266,
+          "saifi": 6.141,
+          "saidi": 795.2056,
+          "caidi": 129.4906
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1375,
+          "total_duration_min": 242744.0,
+          "total_customers_affected": 1595154,
+          "total_customer_minutes": 239966650.0,
+          "total_customers_served": 214266,
+          "saifi": 7.4447,
+          "saidi": 1119.9474,
+          "caidi": 150.4348
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 230,
+          "outage_count_pct": 20.09,
+          "saifi_delta": 1.3037,
+          "saifi_pct": 21.23,
+          "saidi_delta": 324.7418,
+          "saidi_pct": 40.84,
+          "caidi_delta": 20.9442
+        }
+      },
+      "clean_imputed_without_chiang_rai_storm": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1180,
+          "total_duration_min": 173146.5,
+          "total_customers_affected": 1353792,
+          "total_customer_minutes": 175056554.5,
+          "total_customers_served": 214266,
+          "saifi": 6.3183,
+          "saidi": 817.0058,
+          "caidi": 129.3083
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1335,
+          "total_duration_min": 188528.0,
+          "total_customers_affected": 1564351,
+          "total_customer_minutes": 192269066.0,
+          "total_customers_served": 214266,
+          "saifi": 7.301,
+          "saidi": 897.3382,
+          "caidi": 122.9066
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 155,
+          "outage_count_pct": 13.14,
+          "saifi_delta": 0.9827,
+          "saifi_pct": 15.55,
+          "saidi_delta": 80.3324,
+          "saidi_pct": 9.83,
+          "caidi_delta": -6.4017
+        }
+      },
+      "strict_without_extremes": {
+        "2023": {
+          "year": 2023,
+          "outage_count": 1130,
+          "total_duration_min": 154639.0,
+          "total_customers_affected": 1302776,
+          "total_customer_minutes": 159060607.0,
+          "total_customers_served": 214266,
+          "saifi": 6.0802,
+          "saidi": 742.3511,
+          "caidi": 122.0936
+        },
+        "2024": {
+          "year": 2024,
+          "outage_count": 1329,
+          "total_duration_min": 186381.0,
+          "total_customers_affected": 1557999,
+          "total_customer_minutes": 192899691.0,
+          "total_customers_served": 214266,
+          "saifi": 7.2713,
+          "saidi": 900.2814,
+          "caidi": 123.8125
+        },
+        "yoy_change_2024_vs_2023": {
+          "outage_count_delta": 199,
+          "outage_count_pct": 17.61,
+          "saifi_delta": 1.1911,
+          "saifi_pct": 19.59,
+          "saidi_delta": 157.9303,
+          "saidi_pct": 21.27,
+          "caidi_delta": 1.7189
+        }
+      }
+    }
+  },
+  "storm_reconciliation_2024_08_22_23": {
+    "storm_dates": [
+      "2024-08-22",
+      "2024-08-23"
+    ],
+    "province": "เชียงราย",
+    "storm_event_count": 79,
+    "storm_duration_min_sum": 61842.0,
+    "storm_customers_affected_sum": 75086,
+    "storm_customer_minutes": 55378412.0,
+    "share_of_2024_events_pct": 5.59,
+    "share_of_2024_customer_minutes_pct": 22.36,
+    "saidi_contribution_2024_min": 258.4564,
+    "saifi_contribution_2024": 0.3504
+  },
+  "q2_cause_impact": [
+    {
+      "cause": "tree",
+      "outage_count": 1121,
+      "duration_median_min": 166.0,
+      "duration_mean_min": 240.67,
+      "total_duration_min": 269796.5,
+      "total_customers_affected": 1015856,
+      "total_customer_minutes": 235523192.5,
+      "event_share_pct": 43.22,
+      "cm_share_pct": 55.72
+    },
+    {
+      "cause": "equipment",
+      "outage_count": 283,
+      "duration_median_min": 123.0,
+      "duration_mean_min": 185.94,
+      "total_duration_min": 52621.0,
+      "total_customers_affected": 459268,
+      "total_customer_minutes": 70367796.0,
+      "event_share_pct": 10.91,
+      "cm_share_pct": 16.65
+    },
+    {
+      "cause": "lightning",
+      "outage_count": 221,
+      "duration_median_min": 71.0,
+      "duration_mean_min": 105.66,
+      "total_duration_min": 23351.0,
+      "total_customers_affected": 376126,
+      "total_customer_minutes": 34752341.0,
+      "event_share_pct": 8.52,
+      "cm_share_pct": 8.22
+    },
+    {
+      "cause": "vehicle",
+      "outage_count": 99,
+      "duration_median_min": 158.0,
+      "duration_mean_min": 203.86,
+      "total_duration_min": 20182.0,
+      "total_customers_affected": 148980,
+      "total_customer_minutes": 26691686.0,
+      "event_share_pct": 3.82,
+      "cm_share_pct": 6.31
+    },
+    {
+      "cause": "animal",
+      "outage_count": 538,
+      "duration_median_min": 55.0,
+      "duration_mean_min": 70.58,
+      "total_duration_min": 37971.0,
+      "total_customers_affected": 381130,
+      "total_customer_minutes": 23697356.0,
+      "event_share_pct": 20.74,
+      "cm_share_pct": 5.61
+    },
+    {
+      "cause": "unknown",
+      "outage_count": 234,
+      "duration_median_min": 38.0,
+      "duration_mean_min": 61.39,
+      "total_duration_min": 14366.0,
+      "total_customers_affected": 409908,
+      "total_customer_minutes": 22083310.0,
+      "event_share_pct": 9.02,
+      "cm_share_pct": 5.22
+    },
+    {
+      "cause": "overload",
+      "outage_count": 98,
+      "duration_median_min": 41.5,
+      "duration_mean_min": 53.36,
+      "total_duration_min": 5229.0,
+      "total_customers_affected": 201961,
+      "total_customer_minutes": 9588351.0,
+      "event_share_pct": 3.78,
+      "cm_share_pct": 2.27
+    }
+  ],
+  "q3_feeder_priority": {
+    "top5_feeders": [
+      {
+        "feeder_id": "CRI-F11",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 82.4,
+        "customers_served": 3050,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2018,
+        "outage_count": 155,
+        "outage_count_2023": 69,
+        "outage_count_2024": 86,
+        "median_duration_min": 177.0,
+        "total_customer_minutes": 39411384.0,
+        "cm_share_pct": 9.34,
+        "events_per_100km_per_year": 94.05,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F03",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 70.1,
+        "customers_served": 2837,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2002,
+        "outage_count": 103,
+        "outage_count_2023": 39,
+        "outage_count_2024": 64,
+        "median_duration_min": 165.0,
+        "total_customer_minutes": 26613531.0,
+        "cm_share_pct": 6.31,
+        "events_per_100km_per_year": 73.47,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F04",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 73.1,
+        "customers_served": 2971,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2013,
+        "outage_count": 114,
+        "outage_count_2023": 49,
+        "outage_count_2024": 65,
+        "median_duration_min": 143.5,
+        "total_customer_minutes": 24247519.0,
+        "cm_share_pct": 5.75,
+        "events_per_100km_per_year": 77.98,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F09",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 76.9,
+        "customers_served": 2870,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2017,
+        "outage_count": 135,
+        "outage_count_2023": 68,
+        "outage_count_2024": 67,
+        "median_duration_min": 123.0,
+        "total_customer_minutes": 23832468.0,
+        "cm_share_pct": 5.65,
+        "events_per_100km_per_year": 87.78,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F13",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 84.8,
+        "customers_served": 2328,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2005,
+        "outage_count": 118,
+        "outage_count_2023": 43,
+        "outage_count_2024": 75,
+        "median_duration_min": 125.5,
+        "total_customer_minutes": 23019863.0,
+        "cm_share_pct": 5.46,
+        "events_per_100km_per_year": 69.58,
+        "top_cause": "tree"
+      }
+    ],
+    "top5_cumulative_cm_share_pct": 32.51,
+    "all_feeders_ranked": [
+      {
+        "feeder_id": "CRI-F11",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 82.4,
+        "customers_served": 3050,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2018,
+        "outage_count": 155,
+        "outage_count_2023": 69,
+        "outage_count_2024": 86,
+        "median_duration_min": 177.0,
+        "total_customer_minutes": 39411384.0,
+        "cm_share_pct": 9.34,
+        "events_per_100km_per_year": 94.05,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F03",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 70.1,
+        "customers_served": 2837,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2002,
+        "outage_count": 103,
+        "outage_count_2023": 39,
+        "outage_count_2024": 64,
+        "median_duration_min": 165.0,
+        "total_customer_minutes": 26613531.0,
+        "cm_share_pct": 6.31,
+        "events_per_100km_per_year": 73.47,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F04",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 73.1,
+        "customers_served": 2971,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2013,
+        "outage_count": 114,
+        "outage_count_2023": 49,
+        "outage_count_2024": 65,
+        "median_duration_min": 143.5,
+        "total_customer_minutes": 24247519.0,
+        "cm_share_pct": 5.75,
+        "events_per_100km_per_year": 77.98,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F09",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 76.9,
+        "customers_served": 2870,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2017,
+        "outage_count": 135,
+        "outage_count_2023": 68,
+        "outage_count_2024": 67,
+        "median_duration_min": 123.0,
+        "total_customer_minutes": 23832468.0,
+        "cm_share_pct": 5.65,
+        "events_per_100km_per_year": 87.78,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F13",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 84.8,
+        "customers_served": 2328,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2005,
+        "outage_count": 118,
+        "outage_count_2023": 43,
+        "outage_count_2024": 75,
+        "median_duration_min": 125.5,
+        "total_customer_minutes": 23019863.0,
+        "cm_share_pct": 5.46,
+        "events_per_100km_per_year": 69.58,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F10",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 72.6,
+        "customers_served": 2418,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 1998,
+        "outage_count": 93,
+        "outage_count_2023": 42,
+        "outage_count_2024": 51,
+        "median_duration_min": 142.0,
+        "total_customer_minutes": 20144455.0,
+        "cm_share_pct": 4.78,
+        "events_per_100km_per_year": 64.05,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F10",
+        "province": "เชียงใหม่",
+        "area_type": "Rural",
+        "length_km": 68.2,
+        "customers_served": 2888,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2003,
+        "outage_count": 98,
+        "outage_count_2023": 50,
+        "outage_count_2024": 48,
+        "median_duration_min": 146.5,
+        "total_customer_minutes": 18535622.0,
+        "cm_share_pct": 4.39,
+        "events_per_100km_per_year": 71.85,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F12",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 53.3,
+        "customers_served": 3128,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 1996,
+        "outage_count": 77,
+        "outage_count_2023": 41,
+        "outage_count_2024": 36,
+        "median_duration_min": 136.0,
+        "total_customer_minutes": 17761266.5,
+        "cm_share_pct": 4.21,
+        "events_per_100km_per_year": 72.23,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F12",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 84.3,
+        "customers_served": 2499,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 1998,
+        "outage_count": 80,
+        "outage_count_2023": 43,
+        "outage_count_2024": 37,
+        "median_duration_min": 101.0,
+        "total_customer_minutes": 11009540.0,
+        "cm_share_pct": 2.61,
+        "events_per_100km_per_year": 47.45,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F07",
+        "province": "ลำปาง",
+        "area_type": "Urban",
+        "length_km": 11.0,
+        "customers_served": 8493,
+        "tree_cover": "medium",
+        "overhead_pct": 61.0,
+        "install_year": 2000,
+        "outage_count": 35,
+        "outage_count_2023": 13,
+        "outage_count_2024": 22,
+        "median_duration_min": 55.0,
+        "total_customer_minutes": 9762087.0,
+        "cm_share_pct": 2.31,
+        "events_per_100km_per_year": 159.09,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "CMI-F20",
+        "province": "เชียงใหม่",
+        "area_type": "Rural",
+        "length_km": 63.8,
+        "customers_served": 3132,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2002,
+        "outage_count": 70,
+        "outage_count_2023": 32,
+        "outage_count_2024": 38,
+        "median_duration_min": 86.5,
+        "total_customer_minutes": 9720406.0,
+        "cm_share_pct": 2.3,
+        "events_per_100km_per_year": 54.86,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "LPG-F11",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 79.0,
+        "customers_served": 1748,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 1997,
+        "outage_count": 72,
+        "outage_count_2023": 33,
+        "outage_count_2024": 39,
+        "median_duration_min": 133.5,
+        "total_customer_minutes": 9634466.0,
+        "cm_share_pct": 2.28,
+        "events_per_100km_per_year": 45.57,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F08",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 74.7,
+        "customers_served": 2565,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2006,
+        "outage_count": 67,
+        "outage_count_2023": 31,
+        "outage_count_2024": 36,
+        "median_duration_min": 94.0,
+        "total_customer_minutes": 8686550.0,
+        "cm_share_pct": 2.06,
+        "events_per_100km_per_year": 44.85,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F07",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 38.2,
+        "customers_served": 2499,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2015,
+        "outage_count": 55,
+        "outage_count_2023": 24,
+        "outage_count_2024": 31,
+        "median_duration_min": 104.0,
+        "total_customer_minutes": 8156968.0,
+        "cm_share_pct": 1.93,
+        "events_per_100km_per_year": 71.99,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPN-F06",
+        "province": "ลำพูน",
+        "area_type": "Suburban",
+        "length_km": 20.6,
+        "customers_served": 4656,
+        "tree_cover": "high",
+        "overhead_pct": 97.0,
+        "install_year": 1999,
+        "outage_count": 38,
+        "outage_count_2023": 16,
+        "outage_count_2024": 22,
+        "median_duration_min": 67.0,
+        "total_customer_minutes": 7879987.0,
+        "cm_share_pct": 1.87,
+        "events_per_100km_per_year": 92.23,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F10",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 71.0,
+        "customers_served": 1692,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2013,
+        "outage_count": 84,
+        "outage_count_2023": 41,
+        "outage_count_2024": 43,
+        "median_duration_min": 109.0,
+        "total_customer_minutes": 7624910.0,
+        "cm_share_pct": 1.81,
+        "events_per_100km_per_year": 59.15,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F05",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 43.7,
+        "customers_served": 3171,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2014,
+        "outage_count": 43,
+        "outage_count_2023": 22,
+        "outage_count_2024": 21,
+        "median_duration_min": 110.0,
+        "total_customer_minutes": 7560248.0,
+        "cm_share_pct": 1.79,
+        "events_per_100km_per_year": 49.2,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F05",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 42.6,
+        "customers_served": 2189,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 1999,
+        "outage_count": 60,
+        "outage_count_2023": 29,
+        "outage_count_2024": 31,
+        "median_duration_min": 125.0,
+        "total_customer_minutes": 6471530.0,
+        "cm_share_pct": 1.53,
+        "events_per_100km_per_year": 70.42,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F01",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 39.3,
+        "customers_served": 1928,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2018,
+        "outage_count": 52,
+        "outage_count_2023": 21,
+        "outage_count_2024": 31,
+        "median_duration_min": 102.5,
+        "total_customer_minutes": 6377932.0,
+        "cm_share_pct": 1.51,
+        "events_per_100km_per_year": 66.16,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F01",
+        "province": "ลำปาง",
+        "area_type": "Suburban",
+        "length_km": 16.2,
+        "customers_served": 5234,
+        "tree_cover": "medium",
+        "overhead_pct": 90.0,
+        "install_year": 2013,
+        "outage_count": 28,
+        "outage_count_2023": 11,
+        "outage_count_2024": 17,
+        "median_duration_min": 112.0,
+        "total_customer_minutes": 6088482.0,
+        "cm_share_pct": 1.44,
+        "events_per_100km_per_year": 86.42,
+        "top_cause": "vehicle"
+      },
+      {
+        "feeder_id": "LPN-F07",
+        "province": "ลำพูน",
+        "area_type": "Rural",
+        "length_km": 51.4,
+        "customers_served": 1483,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2017,
+        "outage_count": 77,
+        "outage_count_2023": 34,
+        "outage_count_2024": 43,
+        "median_duration_min": 114.0,
+        "total_customer_minutes": 5798648.0,
+        "cm_share_pct": 1.37,
+        "events_per_100km_per_year": 74.9,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F14",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 15.1,
+        "customers_served": 4368,
+        "tree_cover": "medium",
+        "overhead_pct": 87.0,
+        "install_year": 1997,
+        "outage_count": 32,
+        "outage_count_2023": 12,
+        "outage_count_2024": 20,
+        "median_duration_min": 106.0,
+        "total_customer_minutes": 5796071.0,
+        "cm_share_pct": 1.37,
+        "events_per_100km_per_year": 105.96,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CRI-F06",
+        "province": "เชียงราย",
+        "area_type": "Suburban",
+        "length_km": 28.2,
+        "customers_served": 3657,
+        "tree_cover": "high",
+        "overhead_pct": 88.0,
+        "install_year": 2011,
+        "outage_count": 27,
+        "outage_count_2023": 7,
+        "outage_count_2024": 20,
+        "median_duration_min": 65.0,
+        "total_customer_minutes": 5715535.0,
+        "cm_share_pct": 1.36,
+        "events_per_100km_per_year": 47.87,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F06",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 5.1,
+        "customers_served": 6664,
+        "tree_cover": "medium",
+        "overhead_pct": 85.0,
+        "install_year": 2005,
+        "outage_count": 24,
+        "outage_count_2023": 16,
+        "outage_count_2024": 8,
+        "median_duration_min": 72.0,
+        "total_customer_minutes": 5692360.0,
+        "cm_share_pct": 1.35,
+        "events_per_100km_per_year": 235.29,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "LPN-F05",
+        "province": "ลำพูน",
+        "area_type": "Rural",
+        "length_km": 49.9,
+        "customers_served": 2058,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2000,
+        "outage_count": 53,
+        "outage_count_2023": 32,
+        "outage_count_2024": 21,
+        "median_duration_min": 67.0,
+        "total_customer_minutes": 5431088.0,
+        "cm_share_pct": 1.29,
+        "events_per_100km_per_year": 53.11,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "CMI-F17",
+        "province": "เชียงใหม่",
+        "area_type": "Rural",
+        "length_km": 47.3,
+        "customers_served": 1249,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2018,
+        "outage_count": 58,
+        "outage_count_2023": 22,
+        "outage_count_2024": 36,
+        "median_duration_min": 135.0,
+        "total_customer_minutes": 5122320.0,
+        "cm_share_pct": 1.21,
+        "events_per_100km_per_year": 61.31,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPN-F08",
+        "province": "ลำพูน",
+        "area_type": "Suburban",
+        "length_km": 23.1,
+        "customers_served": 4106,
+        "tree_cover": "high",
+        "overhead_pct": 98.0,
+        "install_year": 2004,
+        "outage_count": 36,
+        "outage_count_2023": 15,
+        "outage_count_2024": 21,
+        "median_duration_min": 68.5,
+        "total_customer_minutes": 4907153.0,
+        "cm_share_pct": 1.16,
+        "events_per_100km_per_year": 77.92,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F07",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 9.7,
+        "customers_served": 8762,
+        "tree_cover": "medium",
+        "overhead_pct": 65.0,
+        "install_year": 2011,
+        "outage_count": 22,
+        "outage_count_2023": 6,
+        "outage_count_2024": 16,
+        "median_duration_min": 36.5,
+        "total_customer_minutes": 4882955.0,
+        "cm_share_pct": 1.16,
+        "events_per_100km_per_year": 113.4,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "LPG-F03",
+        "province": "ลำปาง",
+        "area_type": "Rural",
+        "length_km": 31.3,
+        "customers_served": 2846,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2010,
+        "outage_count": 31,
+        "outage_count_2023": 16,
+        "outage_count_2024": 15,
+        "median_duration_min": 82.0,
+        "total_customer_minutes": 4880547.0,
+        "cm_share_pct": 1.16,
+        "events_per_100km_per_year": 49.52,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "CMI-F18",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 16.5,
+        "customers_served": 3758,
+        "tree_cover": "low",
+        "overhead_pct": 97.0,
+        "install_year": 2006,
+        "outage_count": 23,
+        "outage_count_2023": 13,
+        "outage_count_2024": 10,
+        "median_duration_min": 58.0,
+        "total_customer_minutes": 4866484.0,
+        "cm_share_pct": 1.15,
+        "events_per_100km_per_year": 69.7,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CRI-F08",
+        "province": "เชียงราย",
+        "area_type": "Urban",
+        "length_km": 5.0,
+        "customers_served": 6993,
+        "tree_cover": "medium",
+        "overhead_pct": 81.0,
+        "install_year": 1996,
+        "outage_count": 21,
+        "outage_count_2023": 8,
+        "outage_count_2024": 13,
+        "median_duration_min": 48.0,
+        "total_customer_minutes": 4296951.0,
+        "cm_share_pct": 1.02,
+        "events_per_100km_per_year": 210.0,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CRI-F02",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 55.6,
+        "customers_served": 936,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2017,
+        "outage_count": 92,
+        "outage_count_2023": 41,
+        "outage_count_2024": 51,
+        "median_duration_min": 111.0,
+        "total_customer_minutes": 4277117.0,
+        "cm_share_pct": 1.01,
+        "events_per_100km_per_year": 82.73,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CRI-F09",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 28.4,
+        "customers_served": 2500,
+        "tree_cover": "medium",
+        "overhead_pct": 100.0,
+        "install_year": 2017,
+        "outage_count": 29,
+        "outage_count_2023": 13,
+        "outage_count_2024": 16,
+        "median_duration_min": 83.0,
+        "total_customer_minutes": 4125011.5,
+        "cm_share_pct": 0.98,
+        "events_per_100km_per_year": 51.06,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F06",
+        "province": "ลำปาง",
+        "area_type": "Urban",
+        "length_km": 12.5,
+        "customers_served": 7901,
+        "tree_cover": "low",
+        "overhead_pct": 57.0,
+        "install_year": 2002,
+        "outage_count": 25,
+        "outage_count_2023": 11,
+        "outage_count_2024": 14,
+        "median_duration_min": 49.0,
+        "total_customer_minutes": 4003844.0,
+        "cm_share_pct": 0.95,
+        "events_per_100km_per_year": 100.0,
+        "top_cause": "overload"
+      },
+      {
+        "feeder_id": "CMI-F01",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 10.8,
+        "customers_served": 7470,
+        "tree_cover": "low",
+        "overhead_pct": 62.0,
+        "install_year": 2008,
+        "outage_count": 13,
+        "outage_count_2023": 5,
+        "outage_count_2024": 8,
+        "median_duration_min": 70.0,
+        "total_customer_minutes": 3797064.0,
+        "cm_share_pct": 0.9,
+        "events_per_100km_per_year": 60.19,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F15",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 24.2,
+        "customers_served": 4869,
+        "tree_cover": "medium",
+        "overhead_pct": 86.0,
+        "install_year": 2014,
+        "outage_count": 23,
+        "outage_count_2023": 11,
+        "outage_count_2024": 12,
+        "median_duration_min": 78.0,
+        "total_customer_minutes": 3793097.0,
+        "cm_share_pct": 0.9,
+        "events_per_100km_per_year": 47.52,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F19",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 25.4,
+        "customers_served": 3363,
+        "tree_cover": "low",
+        "overhead_pct": 97.0,
+        "install_year": 1999,
+        "outage_count": 21,
+        "outage_count_2023": 10,
+        "outage_count_2024": 11,
+        "median_duration_min": 97.0,
+        "total_customer_minutes": 3774832.0,
+        "cm_share_pct": 0.9,
+        "events_per_100km_per_year": 41.34,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "LPN-F04",
+        "province": "ลำพูน",
+        "area_type": "Suburban",
+        "length_km": 12.6,
+        "customers_served": 5271,
+        "tree_cover": "high",
+        "overhead_pct": 97.0,
+        "install_year": 1996,
+        "outage_count": 25,
+        "outage_count_2023": 12,
+        "outage_count_2024": 13,
+        "median_duration_min": 68.0,
+        "total_customer_minutes": 3466539.0,
+        "cm_share_pct": 0.82,
+        "events_per_100km_per_year": 99.21,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F04",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 23.8,
+        "customers_served": 4157,
+        "tree_cover": "low",
+        "overhead_pct": 87.0,
+        "install_year": 1997,
+        "outage_count": 25,
+        "outage_count_2023": 12,
+        "outage_count_2024": 13,
+        "median_duration_min": 51.0,
+        "total_customer_minutes": 3304156.0,
+        "cm_share_pct": 0.78,
+        "events_per_100km_per_year": 52.52,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "LPN-F03",
+        "province": "ลำพูน",
+        "area_type": "Suburban",
+        "length_km": 14.6,
+        "customers_served": 5073,
+        "tree_cover": "low",
+        "overhead_pct": 95.0,
+        "install_year": 2007,
+        "outage_count": 12,
+        "outage_count_2023": 6,
+        "outage_count_2024": 6,
+        "median_duration_min": 86.5,
+        "total_customer_minutes": 3279687.0,
+        "cm_share_pct": 0.78,
+        "events_per_100km_per_year": 41.1,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "LPN-F01",
+        "province": "ลำพูน",
+        "area_type": "Suburban",
+        "length_km": 21.5,
+        "customers_served": 2872,
+        "tree_cover": "medium",
+        "overhead_pct": 92.0,
+        "install_year": 2007,
+        "outage_count": 38,
+        "outage_count_2023": 19,
+        "outage_count_2024": 19,
+        "median_duration_min": 52.5,
+        "total_customer_minutes": 3278417.0,
+        "cm_share_pct": 0.78,
+        "events_per_100km_per_year": 88.37,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F09",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 23.8,
+        "customers_served": 3304,
+        "tree_cover": "medium",
+        "overhead_pct": 89.0,
+        "install_year": 2019,
+        "outage_count": 23,
+        "outage_count_2023": 11,
+        "outage_count_2024": 12,
+        "median_duration_min": 73.0,
+        "total_customer_minutes": 3250718.0,
+        "cm_share_pct": 0.77,
+        "events_per_100km_per_year": 48.32,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F16",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 26.8,
+        "customers_served": 3029,
+        "tree_cover": "medium",
+        "overhead_pct": 90.0,
+        "install_year": 2016,
+        "outage_count": 28,
+        "outage_count_2023": 11,
+        "outage_count_2024": 17,
+        "median_duration_min": 55.5,
+        "total_customer_minutes": 3237909.0,
+        "cm_share_pct": 0.77,
+        "events_per_100km_per_year": 52.24,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPN-F02",
+        "province": "ลำพูน",
+        "area_type": "Urban",
+        "length_km": 8.5,
+        "customers_served": 4697,
+        "tree_cover": "high",
+        "overhead_pct": 82.0,
+        "install_year": 2009,
+        "outage_count": 30,
+        "outage_count_2023": 8,
+        "outage_count_2024": 22,
+        "median_duration_min": 34.0,
+        "total_customer_minutes": 3055609.0,
+        "cm_share_pct": 0.72,
+        "events_per_100km_per_year": 176.47,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F08",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 17.8,
+        "customers_served": 3694,
+        "tree_cover": "medium",
+        "overhead_pct": 90.0,
+        "install_year": 2008,
+        "outage_count": 25,
+        "outage_count_2023": 10,
+        "outage_count_2024": 15,
+        "median_duration_min": 59.0,
+        "total_customer_minutes": 3043148.5,
+        "cm_share_pct": 0.72,
+        "events_per_100km_per_year": 70.22,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F04",
+        "province": "ลำปาง",
+        "area_type": "Suburban",
+        "length_km": 20.0,
+        "customers_served": 2775,
+        "tree_cover": "medium",
+        "overhead_pct": 95.0,
+        "install_year": 1997,
+        "outage_count": 27,
+        "outage_count_2023": 16,
+        "outage_count_2024": 11,
+        "median_duration_min": 101.0,
+        "total_customer_minutes": 3032550.0,
+        "cm_share_pct": 0.72,
+        "events_per_100km_per_year": 67.5,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "LPG-F02",
+        "province": "ลำปาง",
+        "area_type": "Suburban",
+        "length_km": 12.9,
+        "customers_served": 4963,
+        "tree_cover": "high",
+        "overhead_pct": 97.0,
+        "install_year": 1996,
+        "outage_count": 19,
+        "outage_count_2023": 11,
+        "outage_count_2024": 8,
+        "median_duration_min": 52.0,
+        "total_customer_minutes": 2801104.0,
+        "cm_share_pct": 0.66,
+        "events_per_100km_per_year": 73.64,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F11",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 7.6,
+        "customers_served": 5972,
+        "tree_cover": "low",
+        "overhead_pct": 67.0,
+        "install_year": 1998,
+        "outage_count": 17,
+        "outage_count_2023": 7,
+        "outage_count_2024": 10,
+        "median_duration_min": 40.0,
+        "total_customer_minutes": 2767640.0,
+        "cm_share_pct": 0.66,
+        "events_per_100km_per_year": 111.84,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F03",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 5.1,
+        "customers_served": 7152,
+        "tree_cover": "low",
+        "overhead_pct": 80.0,
+        "install_year": 2013,
+        "outage_count": 18,
+        "outage_count_2023": 9,
+        "outage_count_2024": 9,
+        "median_duration_min": 39.5,
+        "total_customer_minutes": 2569671.0,
+        "cm_share_pct": 0.61,
+        "events_per_100km_per_year": 176.47,
+        "top_cause": "vehicle"
+      },
+      {
+        "feeder_id": "CRI-F14",
+        "province": "เชียงราย",
+        "area_type": "Rural",
+        "length_km": 29.9,
+        "customers_served": 962,
+        "tree_cover": "high",
+        "overhead_pct": 100.0,
+        "install_year": 2018,
+        "outage_count": 51,
+        "outage_count_2023": 23,
+        "outage_count_2024": 28,
+        "median_duration_min": 82.0,
+        "total_customer_minutes": 2563912.0,
+        "cm_share_pct": 0.61,
+        "events_per_100km_per_year": 85.28,
+        "top_cause": "tree"
+      },
+      {
+        "feeder_id": "CMI-F13",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 7.4,
+        "customers_served": 6852,
+        "tree_cover": "low",
+        "overhead_pct": 83.0,
+        "install_year": 2006,
+        "outage_count": 17,
+        "outage_count_2023": 8,
+        "outage_count_2024": 9,
+        "median_duration_min": 47.0,
+        "total_customer_minutes": 2493897.0,
+        "cm_share_pct": 0.59,
+        "events_per_100km_per_year": 114.86,
+        "top_cause": "overload"
+      },
+      {
+        "feeder_id": "CMI-F05",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 7.3,
+        "customers_served": 7258,
+        "tree_cover": "low",
+        "overhead_pct": 58.0,
+        "install_year": 2008,
+        "outage_count": 14,
+        "outage_count_2023": 5,
+        "outage_count_2024": 9,
+        "median_duration_min": 71.5,
+        "total_customer_minutes": 2340408.0,
+        "cm_share_pct": 0.55,
+        "events_per_100km_per_year": 95.89,
+        "top_cause": "equipment"
+      },
+      {
+        "feeder_id": "CMI-F12",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "length_km": 21.8,
+        "customers_served": 3804,
+        "tree_cover": "low",
+        "overhead_pct": 90.0,
+        "install_year": 2017,
+        "outage_count": 15,
+        "outage_count_2023": 6,
+        "outage_count_2024": 9,
+        "median_duration_min": 68.0,
+        "total_customer_minutes": 2195019.0,
+        "cm_share_pct": 0.52,
+        "events_per_100km_per_year": 34.4,
+        "top_cause": "animal"
+      },
+      {
+        "feeder_id": "CMI-F02",
+        "province": "เชียงใหม่",
+        "area_type": "Urban",
+        "length_km": 7.1,
+        "customers_served": 7152,
+        "tree_cover": "medium",
+        "overhead_pct": 78.0,
+        "install_year": 2011,
+        "outage_count": 16,
+        "outage_count_2023": 11,
+        "outage_count_2024": 5,
+        "median_duration_min": 28.0,
+        "total_customer_minutes": 1386895.0,
+        "cm_share_pct": 0.33,
+        "events_per_100km_per_year": 112.68,
+        "top_cause": "overload"
+      }
+    ],
+    "tree_cover_normalized": [
+      {
+        "tree_cover": "high",
+        "feeder_count": 22,
+        "total_length_km": 1062.6,
+        "tree_events": 883.0,
+        "tree_events_per_100km_per_year": 41.55
+      },
+      {
+        "tree_cover": "low",
+        "feeder_count": 11,
+        "total_length_km": 152.8,
+        "tree_events": 14.0,
+        "tree_events_per_100km_per_year": 4.58
+      },
+      {
+        "tree_cover": "medium",
+        "feeder_count": 21,
+        "total_length_km": 658.4,
+        "tree_events": 219.0,
+        "tree_events_per_100km_per_year": 16.63
+      }
+    ],
+    "aging_equipment_alerts": [
+      {
+        "feeder_id": "CMI-F14",
+        "province": "เชียงใหม่",
+        "area_type": "Suburban",
+        "install_year": 1997,
+        "equip_2023": 5,
+        "equip_2024": 19,
+        "equip_delta": 14,
+        "total_customer_minutes": 5796071.0
+      }
+    ]
+  },
+  "q4_temporal_patterns": {
+    "rainy_season_may_oct_share_pct": 58.79,
+    "peak_month_overall": 8,
+    "monthly_by_year": [
+      {
+        "year": 2023,
+        "month": 1,
+        "outage_count": 70,
+        "total_customer_minutes": 9732286.0,
+        "tree_count": 28,
+        "lightning_count": 2,
+        "animal_count": 18,
+        "equipment_count": 10
+      },
+      {
+        "year": 2023,
+        "month": 2,
+        "outage_count": 63,
+        "total_customer_minutes": 9929758.0,
+        "tree_count": 20,
+        "lightning_count": 3,
+        "animal_count": 18,
+        "equipment_count": 10
+      },
+      {
+        "year": 2023,
+        "month": 3,
+        "outage_count": 88,
+        "total_customer_minutes": 10355731.0,
+        "tree_count": 30,
+        "lightning_count": 2,
+        "animal_count": 23,
+        "equipment_count": 7
+      },
+      {
+        "year": 2023,
+        "month": 4,
+        "outage_count": 108,
+        "total_customer_minutes": 14921385.0,
+        "tree_count": 37,
+        "lightning_count": 10,
+        "animal_count": 21,
+        "equipment_count": 8
+      },
+      {
+        "year": 2023,
+        "month": 5,
+        "outage_count": 139,
+        "total_customer_minutes": 18056663.5,
+        "tree_count": 51,
+        "lightning_count": 27,
+        "animal_count": 19,
+        "equipment_count": 12
+      },
+      {
+        "year": 2023,
+        "month": 6,
+        "outage_count": 100,
+        "total_customer_minutes": 15241372.0,
+        "tree_count": 46,
+        "lightning_count": 9,
+        "animal_count": 22,
+        "equipment_count": 14
+      },
+      {
+        "year": 2023,
+        "month": 7,
+        "outage_count": 99,
+        "total_customer_minutes": 17152357.0,
+        "tree_count": 55,
+        "lightning_count": 3,
+        "animal_count": 24,
+        "equipment_count": 8
+      },
+      {
+        "year": 2023,
+        "month": 8,
+        "outage_count": 128,
+        "total_customer_minutes": 18746007.0,
+        "tree_count": 69,
+        "lightning_count": 9,
+        "animal_count": 19,
+        "equipment_count": 14
+      },
+      {
+        "year": 2023,
+        "month": 9,
+        "outage_count": 118,
+        "total_customer_minutes": 18282450.0,
+        "tree_count": 58,
+        "lightning_count": 8,
+        "animal_count": 21,
+        "equipment_count": 13
+      },
+      {
+        "year": 2023,
+        "month": 10,
+        "outage_count": 105,
+        "total_customer_minutes": 20144812.0,
+        "tree_count": 46,
+        "lightning_count": 13,
+        "animal_count": 15,
+        "equipment_count": 18
+      },
+      {
+        "year": 2023,
+        "month": 11,
+        "outage_count": 78,
+        "total_customer_minutes": 11592645.0,
+        "tree_count": 28,
+        "lightning_count": 3,
+        "animal_count": 27,
+        "equipment_count": 13
+      },
+      {
+        "year": 2023,
+        "month": 12,
+        "outage_count": 84,
+        "total_customer_minutes": 10901088.0,
+        "tree_count": 28,
+        "lightning_count": 1,
+        "animal_count": 28,
+        "equipment_count": 12
+      },
+      {
+        "year": 2024,
+        "month": 1,
+        "outage_count": 83,
+        "total_customer_minutes": 14041098.0,
+        "tree_count": 24,
+        "lightning_count": 2,
+        "animal_count": 16,
+        "equipment_count": 10
+      },
+      {
+        "year": 2024,
+        "month": 2,
+        "outage_count": 77,
+        "total_customer_minutes": 8250700.0,
+        "tree_count": 31,
+        "lightning_count": 2,
+        "animal_count": 22,
+        "equipment_count": 11
+      },
+      {
+        "year": 2024,
+        "month": 3,
+        "outage_count": 114,
+        "total_customer_minutes": 14306729.0,
+        "tree_count": 33,
+        "lightning_count": 7,
+        "animal_count": 38,
+        "equipment_count": 13
+      },
+      {
+        "year": 2024,
+        "month": 4,
+        "outage_count": 153,
+        "total_customer_minutes": 19466977.0,
+        "tree_count": 43,
+        "lightning_count": 18,
+        "animal_count": 36,
+        "equipment_count": 13
+      },
+      {
+        "year": 2024,
+        "month": 5,
+        "outage_count": 143,
+        "total_customer_minutes": 19882640.0,
+        "tree_count": 52,
+        "lightning_count": 29,
+        "animal_count": 29,
+        "equipment_count": 10
+      },
+      {
+        "year": 2024,
+        "month": 6,
+        "outage_count": 129,
+        "total_customer_minutes": 18673530.5,
+        "tree_count": 69,
+        "lightning_count": 14,
+        "animal_count": 22,
+        "equipment_count": 12
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "outage_count": 136,
+        "total_customer_minutes": 21104981.0,
+        "tree_count": 56,
+        "lightning_count": 17,
+        "animal_count": 23,
+        "equipment_count": 18
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "outage_count": 207,
+        "total_customer_minutes": 75472929.5,
+        "tree_count": 145,
+        "lightning_count": 15,
+        "animal_count": 21,
+        "equipment_count": 11
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "outage_count": 122,
+        "total_customer_minutes": 20119658.0,
+        "tree_count": 70,
+        "lightning_count": 10,
+        "animal_count": 16,
+        "equipment_count": 12
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "outage_count": 99,
+        "total_customer_minutes": 13718671.0,
+        "tree_count": 42,
+        "lightning_count": 12,
+        "animal_count": 21,
+        "equipment_count": 7
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "outage_count": 82,
+        "total_customer_minutes": 11445005.0,
+        "tree_count": 37,
+        "lightning_count": 3,
+        "animal_count": 20,
+        "equipment_count": 13
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "outage_count": 69,
+        "total_customer_minutes": 11164559.0,
+        "tree_count": 23,
+        "lightning_count": 2,
+        "animal_count": 19,
+        "equipment_count": 14
+      }
+    ],
+    "monthly_overall": [
+      {
+        "month": 1,
+        "outage_count": 153,
+        "total_customer_minutes": 23773384.0
+      },
+      {
+        "month": 2,
+        "outage_count": 140,
+        "total_customer_minutes": 18180458.0
+      },
+      {
+        "month": 3,
+        "outage_count": 202,
+        "total_customer_minutes": 24662460.0
+      },
+      {
+        "month": 4,
+        "outage_count": 261,
+        "total_customer_minutes": 34388362.0
+      },
+      {
+        "month": 5,
+        "outage_count": 282,
+        "total_customer_minutes": 37939303.5
+      },
+      {
+        "month": 6,
+        "outage_count": 229,
+        "total_customer_minutes": 33914902.5
+      },
+      {
+        "month": 7,
+        "outage_count": 235,
+        "total_customer_minutes": 38257338.0
+      },
+      {
+        "month": 8,
+        "outage_count": 335,
+        "total_customer_minutes": 94218936.5
+      },
+      {
+        "month": 9,
+        "outage_count": 240,
+        "total_customer_minutes": 38402108.0
+      },
+      {
+        "month": 10,
+        "outage_count": 204,
+        "total_customer_minutes": 33863483.0
+      },
+      {
+        "month": 11,
+        "outage_count": 160,
+        "total_customer_minutes": 23037650.0
+      },
+      {
+        "month": 12,
+        "outage_count": 153,
+        "total_customer_minutes": 22065647.0
+      }
+    ],
+    "hourly_overall": [
+      {
+        "hour": 0,
+        "outage_count": 72,
+        "total_customer_minutes": 14624608.0
+      },
+      {
+        "hour": 1,
+        "outage_count": 71,
+        "total_customer_minutes": 13918185.0
+      },
+      {
+        "hour": 2,
+        "outage_count": 72,
+        "total_customer_minutes": 10871598.0
+      },
+      {
+        "hour": 3,
+        "outage_count": 69,
+        "total_customer_minutes": 13044883.0
+      },
+      {
+        "hour": 4,
+        "outage_count": 84,
+        "total_customer_minutes": 11797748.0
+      },
+      {
+        "hour": 5,
+        "outage_count": 113,
+        "total_customer_minutes": 15617939.0
+      },
+      {
+        "hour": 6,
+        "outage_count": 120,
+        "total_customer_minutes": 14599303.0
+      },
+      {
+        "hour": 7,
+        "outage_count": 108,
+        "total_customer_minutes": 17368786.0
+      },
+      {
+        "hour": 8,
+        "outage_count": 99,
+        "total_customer_minutes": 13081753.0
+      },
+      {
+        "hour": 9,
+        "outage_count": 84,
+        "total_customer_minutes": 11518658.0
+      },
+      {
+        "hour": 10,
+        "outage_count": 59,
+        "total_customer_minutes": 8162642.0
+      },
+      {
+        "hour": 11,
+        "outage_count": 70,
+        "total_customer_minutes": 11319899.0
+      },
+      {
+        "hour": 12,
+        "outage_count": 95,
+        "total_customer_minutes": 14737316.0
+      },
+      {
+        "hour": 13,
+        "outage_count": 117,
+        "total_customer_minutes": 19463800.0
+      },
+      {
+        "hour": 14,
+        "outage_count": 151,
+        "total_customer_minutes": 22002473.0
+      },
+      {
+        "hour": 15,
+        "outage_count": 202,
+        "total_customer_minutes": 39824937.0
+      },
+      {
+        "hour": 16,
+        "outage_count": 195,
+        "total_customer_minutes": 39204630.0
+      },
+      {
+        "hour": 17,
+        "outage_count": 191,
+        "total_customer_minutes": 33133791.0
+      },
+      {
+        "hour": 18,
+        "outage_count": 159,
+        "total_customer_minutes": 26044213.0
+      },
+      {
+        "hour": 19,
+        "outage_count": 133,
+        "total_customer_minutes": 18294041.5
+      },
+      {
+        "hour": 20,
+        "outage_count": 94,
+        "total_customer_minutes": 14041369.0
+      },
+      {
+        "hour": 21,
+        "outage_count": 86,
+        "total_customer_minutes": 12892600.5
+      },
+      {
+        "hour": 22,
+        "outage_count": 84,
+        "total_customer_minutes": 14408521.5
+      },
+      {
+        "hour": 23,
+        "outage_count": 66,
+        "total_customer_minutes": 12730338.0
+      }
+    ],
+    "heatmap_24x7": [
+      {
+        "dow": 0,
+        "hour": 0,
+        "outage_count": 3,
+        "total_customer_minutes": 1329555.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 1,
+        "outage_count": 12,
+        "total_customer_minutes": 2778802.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 2,
+        "outage_count": 5,
+        "total_customer_minutes": 763404.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 3,
+        "outage_count": 16,
+        "total_customer_minutes": 2018244.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 4,
+        "outage_count": 14,
+        "total_customer_minutes": 954100.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 5,
+        "outage_count": 16,
+        "total_customer_minutes": 1814323.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 6,
+        "outage_count": 16,
+        "total_customer_minutes": 935653.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 7,
+        "outage_count": 13,
+        "total_customer_minutes": 1283054.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 8,
+        "outage_count": 12,
+        "total_customer_minutes": 1390454.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 9,
+        "outage_count": 12,
+        "total_customer_minutes": 1364529.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 10,
+        "outage_count": 7,
+        "total_customer_minutes": 435409.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 11,
+        "outage_count": 5,
+        "total_customer_minutes": 885295.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 12,
+        "outage_count": 13,
+        "total_customer_minutes": 2300164.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 13,
+        "outage_count": 18,
+        "total_customer_minutes": 2389091.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 14,
+        "outage_count": 24,
+        "total_customer_minutes": 3131366.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 15,
+        "outage_count": 26,
+        "total_customer_minutes": 4824408.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 16,
+        "outage_count": 18,
+        "total_customer_minutes": 3333943.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 17,
+        "outage_count": 23,
+        "total_customer_minutes": 3033756.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 18,
+        "outage_count": 22,
+        "total_customer_minutes": 4372908.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 19,
+        "outage_count": 18,
+        "total_customer_minutes": 2261328.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 20,
+        "outage_count": 13,
+        "total_customer_minutes": 2466933.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 21,
+        "outage_count": 10,
+        "total_customer_minutes": 1076990.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 22,
+        "outage_count": 15,
+        "total_customer_minutes": 2713484.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 0,
+        "hour": 23,
+        "outage_count": 9,
+        "total_customer_minutes": 2523622.0,
+        "day_name": "Mon"
+      },
+      {
+        "dow": 1,
+        "hour": 0,
+        "outage_count": 17,
+        "total_customer_minutes": 3926475.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 1,
+        "outage_count": 5,
+        "total_customer_minutes": 2058279.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 2,
+        "outage_count": 11,
+        "total_customer_minutes": 1950011.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 3,
+        "outage_count": 10,
+        "total_customer_minutes": 1379306.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 4,
+        "outage_count": 11,
+        "total_customer_minutes": 2499250.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 5,
+        "outage_count": 24,
+        "total_customer_minutes": 1573039.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 6,
+        "outage_count": 15,
+        "total_customer_minutes": 1640911.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 7,
+        "outage_count": 20,
+        "total_customer_minutes": 1187017.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 8,
+        "outage_count": 14,
+        "total_customer_minutes": 977609.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 9,
+        "outage_count": 11,
+        "total_customer_minutes": 2375551.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 10,
+        "outage_count": 9,
+        "total_customer_minutes": 1846146.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 11,
+        "outage_count": 5,
+        "total_customer_minutes": 1244413.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 12,
+        "outage_count": 14,
+        "total_customer_minutes": 1994920.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 13,
+        "outage_count": 16,
+        "total_customer_minutes": 2036386.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 14,
+        "outage_count": 19,
+        "total_customer_minutes": 2195442.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 15,
+        "outage_count": 23,
+        "total_customer_minutes": 3816196.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 16,
+        "outage_count": 25,
+        "total_customer_minutes": 3001311.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 17,
+        "outage_count": 33,
+        "total_customer_minutes": 5471916.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 18,
+        "outage_count": 23,
+        "total_customer_minutes": 4463180.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 19,
+        "outage_count": 17,
+        "total_customer_minutes": 1222911.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 20,
+        "outage_count": 16,
+        "total_customer_minutes": 1920253.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 21,
+        "outage_count": 10,
+        "total_customer_minutes": 2502236.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 22,
+        "outage_count": 15,
+        "total_customer_minutes": 1888634.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 1,
+        "hour": 23,
+        "outage_count": 9,
+        "total_customer_minutes": 2046264.0,
+        "day_name": "Tue"
+      },
+      {
+        "dow": 2,
+        "hour": 0,
+        "outage_count": 8,
+        "total_customer_minutes": 1776350.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 1,
+        "outage_count": 14,
+        "total_customer_minutes": 1662895.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 2,
+        "outage_count": 10,
+        "total_customer_minutes": 1805150.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 3,
+        "outage_count": 11,
+        "total_customer_minutes": 1897088.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 4,
+        "outage_count": 11,
+        "total_customer_minutes": 359317.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 5,
+        "outage_count": 13,
+        "total_customer_minutes": 1534022.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 6,
+        "outage_count": 10,
+        "total_customer_minutes": 595075.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 7,
+        "outage_count": 7,
+        "total_customer_minutes": 734397.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 8,
+        "outage_count": 9,
+        "total_customer_minutes": 499922.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 9,
+        "outage_count": 9,
+        "total_customer_minutes": 1386305.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 10,
+        "outage_count": 5,
+        "total_customer_minutes": 491487.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 11,
+        "outage_count": 10,
+        "total_customer_minutes": 1584601.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 12,
+        "outage_count": 13,
+        "total_customer_minutes": 1283129.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 13,
+        "outage_count": 10,
+        "total_customer_minutes": 1816493.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 14,
+        "outage_count": 19,
+        "total_customer_minutes": 2711779.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 15,
+        "outage_count": 24,
+        "total_customer_minutes": 3439255.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 16,
+        "outage_count": 27,
+        "total_customer_minutes": 3900137.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 17,
+        "outage_count": 31,
+        "total_customer_minutes": 5029511.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 18,
+        "outage_count": 25,
+        "total_customer_minutes": 3479650.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 19,
+        "outage_count": 18,
+        "total_customer_minutes": 3368021.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 20,
+        "outage_count": 16,
+        "total_customer_minutes": 3070358.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 21,
+        "outage_count": 10,
+        "total_customer_minutes": 1411941.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 22,
+        "outage_count": 14,
+        "total_customer_minutes": 2497379.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 2,
+        "hour": 23,
+        "outage_count": 14,
+        "total_customer_minutes": 1861757.0,
+        "day_name": "Wed"
+      },
+      {
+        "dow": 3,
+        "hour": 0,
+        "outage_count": 14,
+        "total_customer_minutes": 3267302.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 1,
+        "outage_count": 12,
+        "total_customer_minutes": 2422951.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 2,
+        "outage_count": 17,
+        "total_customer_minutes": 1845567.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 3,
+        "outage_count": 6,
+        "total_customer_minutes": 2575290.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 4,
+        "outage_count": 15,
+        "total_customer_minutes": 3209975.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 5,
+        "outage_count": 14,
+        "total_customer_minutes": 2280043.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 6,
+        "outage_count": 18,
+        "total_customer_minutes": 2761309.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 7,
+        "outage_count": 19,
+        "total_customer_minutes": 8263119.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 8,
+        "outage_count": 16,
+        "total_customer_minutes": 4219059.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 9,
+        "outage_count": 9,
+        "total_customer_minutes": 1137832.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 10,
+        "outage_count": 10,
+        "total_customer_minutes": 1865958.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 11,
+        "outage_count": 14,
+        "total_customer_minutes": 2644823.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 12,
+        "outage_count": 13,
+        "total_customer_minutes": 2522812.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 13,
+        "outage_count": 22,
+        "total_customer_minutes": 4034415.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 14,
+        "outage_count": 26,
+        "total_customer_minutes": 4547114.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 15,
+        "outage_count": 37,
+        "total_customer_minutes": 11836385.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 16,
+        "outage_count": 34,
+        "total_customer_minutes": 13009059.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 17,
+        "outage_count": 31,
+        "total_customer_minutes": 5112670.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 18,
+        "outage_count": 26,
+        "total_customer_minutes": 4360783.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 19,
+        "outage_count": 28,
+        "total_customer_minutes": 3844210.5,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 20,
+        "outage_count": 16,
+        "total_customer_minutes": 2122619.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 21,
+        "outage_count": 12,
+        "total_customer_minutes": 2766100.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 22,
+        "outage_count": 5,
+        "total_customer_minutes": 1532232.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 3,
+        "hour": 23,
+        "outage_count": 7,
+        "total_customer_minutes": 1768086.0,
+        "day_name": "Thu"
+      },
+      {
+        "dow": 4,
+        "hour": 0,
+        "outage_count": 7,
+        "total_customer_minutes": 766889.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 1,
+        "outage_count": 14,
+        "total_customer_minutes": 2385603.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 2,
+        "outage_count": 8,
+        "total_customer_minutes": 748451.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 3,
+        "outage_count": 8,
+        "total_customer_minutes": 2347948.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 4,
+        "outage_count": 15,
+        "total_customer_minutes": 2142409.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 5,
+        "outage_count": 9,
+        "total_customer_minutes": 1971327.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 6,
+        "outage_count": 19,
+        "total_customer_minutes": 3582682.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 7,
+        "outage_count": 16,
+        "total_customer_minutes": 1928686.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 8,
+        "outage_count": 17,
+        "total_customer_minutes": 2701508.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 9,
+        "outage_count": 17,
+        "total_customer_minutes": 1634543.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 10,
+        "outage_count": 9,
+        "total_customer_minutes": 1475790.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 11,
+        "outage_count": 15,
+        "total_customer_minutes": 3206597.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 12,
+        "outage_count": 14,
+        "total_customer_minutes": 2155306.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 13,
+        "outage_count": 17,
+        "total_customer_minutes": 3261230.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 14,
+        "outage_count": 30,
+        "total_customer_minutes": 4146705.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 15,
+        "outage_count": 31,
+        "total_customer_minutes": 5603469.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 16,
+        "outage_count": 29,
+        "total_customer_minutes": 6805986.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 17,
+        "outage_count": 26,
+        "total_customer_minutes": 8205959.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 18,
+        "outage_count": 24,
+        "total_customer_minutes": 3503377.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 19,
+        "outage_count": 19,
+        "total_customer_minutes": 3906663.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 20,
+        "outage_count": 8,
+        "total_customer_minutes": 1054889.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 21,
+        "outage_count": 17,
+        "total_customer_minutes": 1744724.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 22,
+        "outage_count": 11,
+        "total_customer_minutes": 2590741.5,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 4,
+        "hour": 23,
+        "outage_count": 12,
+        "total_customer_minutes": 2666177.0,
+        "day_name": "Fri"
+      },
+      {
+        "dow": 5,
+        "hour": 0,
+        "outage_count": 11,
+        "total_customer_minutes": 2379780.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 1,
+        "outage_count": 5,
+        "total_customer_minutes": 524837.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 2,
+        "outage_count": 8,
+        "total_customer_minutes": 1597306.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 3,
+        "outage_count": 9,
+        "total_customer_minutes": 830435.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 4,
+        "outage_count": 8,
+        "total_customer_minutes": 1765676.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 5,
+        "outage_count": 19,
+        "total_customer_minutes": 2255330.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 6,
+        "outage_count": 23,
+        "total_customer_minutes": 4014076.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 7,
+        "outage_count": 20,
+        "total_customer_minutes": 2158201.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 8,
+        "outage_count": 18,
+        "total_customer_minutes": 2303616.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 9,
+        "outage_count": 12,
+        "total_customer_minutes": 2424867.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 10,
+        "outage_count": 11,
+        "total_customer_minutes": 917857.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 11,
+        "outage_count": 13,
+        "total_customer_minutes": 1013692.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 12,
+        "outage_count": 15,
+        "total_customer_minutes": 2519768.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 13,
+        "outage_count": 16,
+        "total_customer_minutes": 1511104.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 14,
+        "outage_count": 15,
+        "total_customer_minutes": 1921512.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 15,
+        "outage_count": 28,
+        "total_customer_minutes": 5932749.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 16,
+        "outage_count": 28,
+        "total_customer_minutes": 4325794.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 17,
+        "outage_count": 23,
+        "total_customer_minutes": 3241234.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 18,
+        "outage_count": 16,
+        "total_customer_minutes": 2510503.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 19,
+        "outage_count": 13,
+        "total_customer_minutes": 1510249.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 20,
+        "outage_count": 13,
+        "total_customer_minutes": 1751394.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 21,
+        "outage_count": 13,
+        "total_customer_minutes": 1928476.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 22,
+        "outage_count": 12,
+        "total_customer_minutes": 1889342.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 5,
+        "hour": 23,
+        "outage_count": 6,
+        "total_customer_minutes": 936464.0,
+        "day_name": "Sat"
+      },
+      {
+        "dow": 6,
+        "hour": 0,
+        "outage_count": 12,
+        "total_customer_minutes": 1178257.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 1,
+        "outage_count": 9,
+        "total_customer_minutes": 2084818.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 2,
+        "outage_count": 13,
+        "total_customer_minutes": 2161709.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 3,
+        "outage_count": 9,
+        "total_customer_minutes": 1996572.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 4,
+        "outage_count": 10,
+        "total_customer_minutes": 867021.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 5,
+        "outage_count": 18,
+        "total_customer_minutes": 4189855.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 6,
+        "outage_count": 19,
+        "total_customer_minutes": 1069597.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 7,
+        "outage_count": 13,
+        "total_customer_minutes": 1814312.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 8,
+        "outage_count": 13,
+        "total_customer_minutes": 989585.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 9,
+        "outage_count": 14,
+        "total_customer_minutes": 1195031.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 10,
+        "outage_count": 8,
+        "total_customer_minutes": 1129995.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 11,
+        "outage_count": 8,
+        "total_customer_minutes": 740478.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 12,
+        "outage_count": 13,
+        "total_customer_minutes": 1961217.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 13,
+        "outage_count": 18,
+        "total_customer_minutes": 4415081.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 14,
+        "outage_count": 18,
+        "total_customer_minutes": 3348555.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 15,
+        "outage_count": 33,
+        "total_customer_minutes": 4372475.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 16,
+        "outage_count": 34,
+        "total_customer_minutes": 4828400.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 17,
+        "outage_count": 24,
+        "total_customer_minutes": 3038745.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 18,
+        "outage_count": 23,
+        "total_customer_minutes": 3353812.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 19,
+        "outage_count": 20,
+        "total_customer_minutes": 2180659.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 20,
+        "outage_count": 12,
+        "total_customer_minutes": 1654923.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 21,
+        "outage_count": 14,
+        "total_customer_minutes": 1462133.5,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 22,
+        "outage_count": 12,
+        "total_customer_minutes": 1296709.0,
+        "day_name": "Sun"
+      },
+      {
+        "dow": 6,
+        "hour": 23,
+        "outage_count": 9,
+        "total_customer_minutes": 927968.0,
+        "day_name": "Sun"
+      }
+    ],
+    "cause_time_profile": [
+      {
+        "cause": "tree",
+        "count": 1121,
+        "rainy_season_may_oct_pct": 67.7,
+        "morning_05_09_pct": 12.4,
+        "afternoon_14_18_pct": 44.5,
+        "evening_18_22_pct": 21.5,
+        "peak_hour": 16
+      },
+      {
+        "cause": "animal",
+        "count": 538,
+        "rainy_season_may_oct_pct": 46.8,
+        "morning_05_09_pct": 46.1,
+        "afternoon_14_18_pct": 15.1,
+        "evening_18_22_pct": 17.1,
+        "peak_hour": 6
+      },
+      {
+        "cause": "equipment",
+        "count": 283,
+        "rainy_season_may_oct_pct": 52.7,
+        "morning_05_09_pct": 20.1,
+        "afternoon_14_18_pct": 21.9,
+        "evening_18_22_pct": 23.0,
+        "peak_hour": 22
+      },
+      {
+        "cause": "unknown",
+        "count": 234,
+        "rainy_season_may_oct_pct": 55.6,
+        "morning_05_09_pct": 23.5,
+        "afternoon_14_18_pct": 20.5,
+        "evening_18_22_pct": 20.5,
+        "peak_hour": 9
+      },
+      {
+        "cause": "lightning",
+        "count": 221,
+        "rainy_season_may_oct_pct": 75.1,
+        "morning_05_09_pct": 4.1,
+        "afternoon_14_18_pct": 67.0,
+        "evening_18_22_pct": 24.4,
+        "peak_hour": 15
+      },
+      {
+        "cause": "vehicle",
+        "count": 99,
+        "rainy_season_may_oct_pct": 40.4,
+        "morning_05_09_pct": 13.1,
+        "afternoon_14_18_pct": 9.1,
+        "evening_18_22_pct": 28.3,
+        "peak_hour": 23
+      },
+      {
+        "cause": "overload",
+        "count": 98,
+        "rainy_season_may_oct_pct": 29.6,
+        "morning_05_09_pct": 3.1,
+        "afternoon_14_18_pct": 52.0,
+        "evening_18_22_pct": 28.6,
+        "peak_hour": 14
+      }
+    ]
+  },
+  "q5_weather_analysis": {
+    "observed_province_days": 2899,
+    "missing_province_days_not_joined": 25,
+    "thunderstorm_comparison": {
+      "thunderstorm_days_count": 428,
+      "thunderstorm_avg_outages_per_province_day": 1.734,
+      "non_thunderstorm_days_count": 2471,
+      "non_thunderstorm_avg_outages_per_province_day": 0.737,
+      "thunderstorm_risk_multiplier": 2.35
+    },
+    "correlations_daily_province": {
+      "rainfall_mm_pearson": 0.3715,
+      "rainfall_mm_spearman": 0.1939,
+      "max_wind_kmh_pearson": 0.2644,
+      "max_wind_kmh_spearman": 0.1139,
+      "max_temp_c_pearson": 0.0929
+    },
+    "by_rain_tier": [
+      {
+        "rain_tier": "No Rain (0 mm)",
+        "province_days": 1877,
+        "avg_outages_per_day": 0.704,
+        "total_outages": 1322.0
+      },
+      {
+        "rain_tier": "Light (0-10 mm)",
+        "province_days": 358,
+        "avg_outages_per_day": 0.913,
+        "total_outages": 327.0
+      },
+      {
+        "rain_tier": "Moderate (10-35 mm)",
+        "province_days": 476,
+        "avg_outages_per_day": 1.158,
+        "total_outages": 551.0
+      },
+      {
+        "rain_tier": "Heavy (>35 mm)",
+        "province_days": 148,
+        "avg_outages_per_day": 2.25,
+        "total_outages": 333.0
+      }
+    ],
+    "by_wind_tier": [
+      {
+        "wind_tier": "Calm (<=25 km/h)",
+        "province_days": 2381,
+        "avg_outages_per_day": 0.749,
+        "total_outages": 1783.0
+      },
+      {
+        "wind_tier": "Moderate (25-45 km/h)",
+        "province_days": 433,
+        "avg_outages_per_day": 1.249,
+        "total_outages": 541.0
+      },
+      {
+        "wind_tier": "High Wind (>45 km/h)",
+        "province_days": 85,
+        "avg_outages_per_day": 2.824,
+        "total_outages": 240.0
+      }
+    ]
+  },
+  "q6_restoration_analysis": {
+    "by_area_type": [
+      {
+        "area_type": "Urban",
+        "outage_count": 252,
+        "duration_median_min": 43.5,
+        "duration_mean_min": 70.8,
+        "duration_p95_min": 210.4,
+        "crew_arrival_median_min": 18.0,
+        "crew_arrival_mean_min": 17.7,
+        "median_crew_share_of_duration_pct": 34.7,
+        "mean_crew_share_of_duration_pct": 44.6,
+        "caidi_min": 70.7
+      },
+      {
+        "area_type": "Suburban",
+        "outage_count": 465,
+        "duration_median_min": 73.0,
+        "duration_mean_min": 106.0,
+        "duration_p95_min": 295.2,
+        "crew_arrival_median_min": 28.0,
+        "crew_arrival_mean_min": 28.0,
+        "median_crew_share_of_duration_pct": 36.1,
+        "mean_crew_share_of_duration_pct": 45.6,
+        "caidi_min": 104.0
+      },
+      {
+        "area_type": "Rural",
+        "outage_count": 1867,
+        "duration_median_min": 122.0,
+        "duration_mean_min": 190.0,
+        "duration_p95_min": 541.5,
+        "crew_arrival_median_min": 49.0,
+        "crew_arrival_mean_min": 51.4,
+        "median_crew_share_of_duration_pct": 39.1,
+        "mean_crew_share_of_duration_pct": 47.1,
+        "caidi_min": 187.0
+      }
+    ],
+    "crew_vs_duration_pearson": 0.3449,
+    "crew_vs_duration_spearman": 0.2583,
+    "crew_to_duration_ols_slope": 3.231,
+    "crew_to_duration_ols_intercept": 20.89,
+    "crew_non_null_count": 2450
+  },
+  "q7_three_project_simulation": {
+    "baseline_2024_saidi_min": 1155.79,
+    "estimated_total_saidi_reduction_min": 319.37,
+    "estimated_total_saidi_reduction_pct": 27.63,
+    "projected_2024_saidi_min": 836.43,
+    "projects": [
+      {
+        "project_id": "P1",
+        "title": "ตัดแต่งกิ่งไม้เชิงรุกก่อนฤดูฝน + เปลี่ยนสายหุ้มฉนวน (Tree Cover High)",
+        "target_scope": "สายป้อน Top 5: CRI-F11, CRI-F03, CRI-F04, LPG-F09, CRI-F13 (เฉพาะเหตุจากต้นไม้)",
+        "baseline_target_cm_2024": 75098858.0,
+        "assumption": "ลดผลกระทบเหตุจากต้นไม้ในสายป้อนเป้าหมายลง 65%",
+        "estimated_saidi_reduction_min": 227.82,
+        "share_of_total_reduction_pct": 71.3
+      },
+      {
+        "project_id": "P2",
+        "title": "ตั้งจุดเตรียมทีมช่างส่วนหน้าในชนบทเชียงราย + แผนรับมือพายุ",
+        "target_scope": "สายป้อนเขตชนบท จังหวัดเชียงราย (ลดเวลาเดินทาง/กู้คืนเฉลี่ย 20 นาที/ครั้ง)",
+        "baseline_target_cm_2024": 121967875.5,
+        "assumption": "ลดเวลาเดินทางและกู้คืนลงเฉลี่ย 20 นาทีต่อเหตุการณ์ในชนบทเชียงราย (หักซ้ำซ้อน P1 แล้ว)",
+        "estimated_saidi_reduction_min": 35.84,
+        "share_of_total_reduction_pct": 11.2
+      },
+      {
+        "project_id": "P3",
+        "title": "เปลี่ยนอุปกรณ์เสื่อมสภาพเร่งด่วน (CMI-F14 และสายเสี่ยง) + ติดตั้งอุปกรณ์ป้องกันสัตว์",
+        "target_scope": "เปลี่ยนอุปกรณ์บน CMI-F14 และสายป้อนหลัก (ลดเหตุอุปกรณ์ 70%) + กันสัตว์ช่วงเช้า (ลดเหตุสัตว์ 50%)",
+        "baseline_target_cm_2024": 20560021.0,
+        "assumption": "ลดเหตุอุปกรณ์ชำรุดในสายเป้าหมาย 70% และเหตุจากสัตว์ทั้งระบบ 50%",
+        "estimated_saidi_reduction_min": 55.71,
+        "share_of_total_reduction_pct": 17.4
+      }
+    ]
+  },
+  "by_province": [
+    {
+      "province": "เชียงราย",
+      "outage_count": 1030,
+      "total_customer_minutes": 194271693.0,
+      "duration_median_min": 126.5
+    },
+    {
+      "province": "ลำปาง",
+      "outage_count": 663,
+      "total_customer_minutes": 97828078.0,
+      "duration_median_min": 105.0
+    },
+    {
+      "province": "เชียงใหม่",
+      "outage_count": 582,
+      "total_customer_minutes": 92570672.5,
+      "duration_median_min": 83.0
+    },
+    {
+      "province": "ลำพูน",
+      "outage_count": 309,
+      "total_customer_minutes": 37097128.0,
+      "duration_median_min": 75.0
+    }
+  ]
+}
