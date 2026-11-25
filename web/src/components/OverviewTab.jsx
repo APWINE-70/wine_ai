@@ -18,16 +18,16 @@ import ChartWrapper from "./ChartWrapper";
 import Heatmap24x7 from "./Heatmap24x7";
 import StoryCard from "./StoryCard";
 
-function KpiCard({ title, value, unit, subtext, icon: Icon, tone = "sky" }) {
+function KpiCard({ title, value, unit, subtext, icon: Icon, tone = "emerald" }) {
   const tones = {
-    sky: "bg-sky-50 text-sky-700",
-    rose: "bg-rose-50 text-rose-700",
-    amber: "bg-amber-50 text-amber-700",
     emerald: "bg-emerald-50 text-emerald-700",
-    indigo: "bg-indigo-50 text-indigo-700",
+    teal: "bg-teal-50 text-teal-700",
+    mint: "bg-green-50 text-green-700",
+    amber: "bg-amber-50 text-amber-700",
+    rose: "bg-rose-50 text-rose-600",
   };
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <div className="rounded-2xl border border-emerald-100 bg-white p-4 shadow-sm shadow-emerald-950/[0.03]">
       <div className="flex items-start justify-between">
         <div>
           <p className="text-xs font-medium text-slate-500">{title}</p>
@@ -35,7 +35,7 @@ function KpiCard({ title, value, unit, subtext, icon: Icon, tone = "sky" }) {
             {value} <span className="text-xs font-normal text-slate-500">{unit}</span>
           </p>
         </div>
-        <div className={`rounded-lg p-2 ${tones[tone] || tones.sky}`}>
+        <div className={`rounded-xl p-2.5 ${tones[tone] || tones.emerald}`}>
           <Icon className="h-4 w-4" />
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function OverviewTab({
           unit="ครั้ง"
           subtext={yearFilter === "ALL" && y23 && y24 ? `2566: ${y23.count.toLocaleString()} → 2567: ${y24.count.toLocaleString()}` : "เฉพาะไฟดับไม่ได้วางแผน"}
           icon={Zap}
-          tone="sky"
+          tone="emerald"
         />
         <KpiCard
           title="SAIFI (ความถี่เฉลี่ย)"
@@ -92,7 +92,7 @@ export default function OverviewTab({
           unit="ครั้ง/ราย"
           subtext={yearFilter === "ALL" && y23 && y24 ? `2566: ${y23.saifi.toFixed(2)} → 2567: ${y24.saifi.toFixed(2)}` : "คำนวณจากฐานลูกค้าสายป้อน"}
           icon={Activity}
-          tone="indigo"
+          tone="teal"
         />
         <KpiCard
           title="SAIDI (เวลาดับเฉลี่ย)"
@@ -116,13 +116,13 @@ export default function OverviewTab({
           unit="ล้านนาที-ราย"
           subtext={`ผู้ได้รับผลกระทบรวม ${kpis.customersAffectedSum.toLocaleString()} ราย-ครั้ง`}
           icon={Users}
-          tone="emerald"
+          tone="mint"
         />
       </div>
 
       {/* Row 1: YoY + Pareto */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <h2 className="text-sm font-bold text-slate-900">
             1. เปรียบเทียบดัชนีความน่าเชื่อถือรายปี (2566 vs 2567)
           </h2>
@@ -139,8 +139,8 @@ export default function OverviewTab({
                   <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 11 }} />
                   <Tooltip />
                   <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Bar yAxisId="left" dataKey="saidi" name="SAIDI (นาที/ราย/ปี)" fill="#e11d48" radius={[6, 6, 0, 0]} />
-                  <Bar yAxisId="right" dataKey="saifi" name="SAIFI (ครั้ง/ราย/ปี)" fill="#0284c7" radius={[6, 6, 0, 0]} />
+                  <Bar yAxisId="left" dataKey="saidi" name="SAIDI (นาที/ราย/ปี)" fill="#059669" radius={[6, 6, 0, 0]} />
+                  <Bar yAxisId="right" dataKey="saifi" name="SAIFI (ครั้ง/ราย/ปี)" fill="#14b8a6" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </ChartWrapper>
@@ -153,7 +153,7 @@ export default function OverviewTab({
           />
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <h2 className="text-sm font-bold text-slate-900">
             2. Pareto สาเหตุไฟดับ: ความเสียหาย (ล้านนาที-ราย) vs สัดส่วนสะสม (%)
           </h2>
@@ -170,7 +170,7 @@ export default function OverviewTab({
                   <YAxis yAxisId="right" orientation="right" domain={[0, 100]} tick={{ fontSize: 11 }} unit="%" />
                   <Tooltip />
                   <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Bar yAxisId="left" dataKey="cmMillion" name="Customer-Minutes (ล้าน)" fill="#0f766e" radius={[6, 6, 0, 0]} />
+                  <Bar yAxisId="left" dataKey="cmMillion" name="Customer-Minutes (ล้าน)" fill="#10b981" radius={[6, 6, 0, 0]} />
                   <Line yAxisId="right" type="monotone" dataKey="cumCmPct" name="สัดส่วนสะสม (%)" stroke="#f59e0b" strokeWidth={2.5} dot={{ r: 3 }} />
                 </ComposedChart>
               </ResponsiveContainer>
@@ -187,7 +187,7 @@ export default function OverviewTab({
 
       {/* Row 2: Monthly Trend + 24x7 Heatmap */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <h2 className="text-sm font-bold text-slate-900">
             3. แนวโน้มจำนวนครั้งไฟดับรายเดือน (2566 vs 2567)
           </h2>
@@ -203,8 +203,8 @@ export default function OverviewTab({
                   <YAxis tick={{ fontSize: 11 }} />
                   <Tooltip />
                   <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Line type="monotone" dataKey="y2023Count" name="ปี 2566 (ครั้ง)" stroke="#64748b" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="y2024Count" name="ปี 2567 (ครั้ง)" stroke="#dc2626" strokeWidth={2.5} dot={{ r: 3.5 }} />
+                  <Line type="monotone" dataKey="y2023Count" name="ปี 2566 (ครั้ง)" stroke="#94a3b8" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="y2024Count" name="ปี 2567 (ครั้ง)" stroke="#059669" strokeWidth={2.5} dot={{ r: 3.5 }} />
                 </LineChart>
               </ResponsiveContainer>
             </ChartWrapper>
@@ -217,7 +217,7 @@ export default function OverviewTab({
           />
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <h2 className="text-sm font-bold text-slate-900">
             4. แผนที่ความร้อนรายชั่วโมง × วันในสัปดาห์ (24×7 Heatmap)
           </h2>

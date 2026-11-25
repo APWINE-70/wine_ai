@@ -24,36 +24,36 @@ export default function LoginGate({ onAuthenticated }) {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 p-4">
-      <div className="w-full max-w-md rounded-2xl border border-slate-700/60 bg-white p-6 shadow-2xl">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-4">
+      <div className="w-full max-w-md rounded-2xl border border-emerald-100 bg-white p-7 shadow-xl shadow-emerald-900/5">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-600 text-white">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm shadow-emerald-600/20">
             <Zap className="h-6 w-6" />
           </div>
           <div>
             <h1 className="text-lg font-bold text-slate-900">Lanna Power Reliability</h1>
-            <p className="text-xs text-slate-500">Executive Outage Analytics (2566–2567)</p>
+            <p className="text-xs text-emerald-700">Executive Outage Analytics (2566–2567)</p>
           </div>
         </div>
 
-        <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-3 text-xs text-sky-900">
-          <div className="flex items-center gap-1.5 font-semibold">
-            <ShieldCheck className="h-4 w-4 text-sky-700" />
+        <div className="mt-5 rounded-xl border border-emerald-200 bg-emerald-50/70 p-3.5 text-xs text-emerald-950">
+          <div className="flex items-center gap-1.5 font-semibold text-emerald-800">
+            <ShieldCheck className="h-4 w-4 text-emerald-600" />
             บัญชีทดสอบสำหรับคณะกรรมการ (Judge Test Account)
           </div>
-          <p className="mt-1 font-mono text-[11px]">
+          <p className="mt-1 font-mono text-[11px] text-emerald-900">
             Email: <strong>{DEMO_ACCOUNT.email}</strong> · Pass: <strong>{DEMO_ACCOUNT.password}</strong>
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-4 space-y-3">
+        <form onSubmit={handleSubmit} className="mt-4 space-y-3.5">
           <div>
             <label className="block text-xs font-medium text-slate-700">อีเมลผู้ใช้งาน</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-sky-500 focus:outline-none"
+              className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               required
             />
           </div>
@@ -63,14 +63,14 @@ export default function LoginGate({ onAuthenticated }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-sky-500 focus:outline-none"
+              className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               required
             />
           </div>
           {error ? <p className="text-xs font-medium text-rose-600">{error}</p> : null}
           <button
             type="submit"
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-700"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-emerald-600/20 transition hover:bg-emerald-700"
           >
             <Lock className="h-4 w-4" />
             เข้าสู่ระบบแดชบอร์ด

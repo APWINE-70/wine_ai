@@ -16,11 +16,11 @@ import StoryCard from "./StoryCard";
 
 export default function ProposalsTab({ threeProjects }) {
   const chartData = [
-    { name: "ฐานปี 2567 (Baseline)", saidi: threeProjects.baseline_2024_saidi_min, color: "#e11d48" },
+    { name: "ฐานปี 2567 (Baseline)", saidi: threeProjects.baseline_2024_saidi_min, color: "#94a3b8" },
     ...threeProjects.projects.map((p) => ({
       name: `ลดจาก ${p.project_id}`,
       saidi: p.estimated_saidi_reduction_min,
-      color: "#0284c7",
+      color: "#14b8a6",
     })),
     { name: "คาดการณ์หลัง 3 โครงการ", saidi: threeProjects.projected_2024_saidi_min, color: "#059669" },
   ];
@@ -28,20 +28,20 @@ export default function ProposalsTab({ threeProjects }) {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="rounded-2xl border border-emerald-100 bg-white p-4 shadow-sm shadow-emerald-950/[0.03]">
           <p className="text-xs text-slate-500">SAIDI ฐานปี 2567 (ก่อนปรับปรุง)</p>
-          <p className="mt-1 text-2xl font-bold text-rose-600">
+          <p className="mt-1 text-2xl font-bold text-slate-700">
             {threeProjects.baseline_2024_saidi_min.toLocaleString()} <span className="text-xs font-normal">นาที/ราย/ปี</span>
           </p>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <p className="text-xs text-slate-500">คาดการณ์ลด SAIDI รวม 3 โครงการ</p>
-          <p className="mt-1 text-2xl font-bold text-sky-700">
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-4 shadow-sm shadow-emerald-950/[0.03]">
+          <p className="text-xs text-emerald-800">คาดการณ์ลด SAIDI รวม 3 โครงการ</p>
+          <p className="mt-1 text-2xl font-bold text-emerald-700">
             -{threeProjects.estimated_total_saidi_reduction_min.toLocaleString()}{" "}
             <span className="text-xs font-normal">นาที (-{threeProjects.estimated_total_saidi_reduction_pct}%)</span>
           </p>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="rounded-2xl border border-emerald-100 bg-white p-4 shadow-sm shadow-emerald-950/[0.03]">
           <p className="text-xs text-slate-500">SAIDI คาดการณ์หลังลงทุนปี 2568</p>
           <p className="mt-1 text-2xl font-bold text-emerald-700">
             {threeProjects.projected_2024_saidi_min.toLocaleString()} <span className="text-xs font-normal">นาที/ราย/ปี</span>
@@ -49,7 +49,7 @@ export default function ProposalsTab({ threeProjects }) {
         </div>
       </div>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+      <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
         <div className="flex items-center gap-2">
           <Target className="h-4 w-4 text-emerald-700" />
           <h2 className="text-sm font-bold text-slate-900">
@@ -83,9 +83,9 @@ export default function ProposalsTab({ threeProjects }) {
 
       <div className="grid gap-4 lg:grid-cols-3">
         {threeProjects.projects.map((p) => (
-          <div key={p.project_id} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div key={p.project_id} className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03]">
             <div className="flex items-center justify-between">
-              <span className="rounded-lg bg-sky-100 px-2.5 py-1 text-xs font-bold text-sky-800">
+              <span className="rounded-lg bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-800">
                 {p.project_id} · สัดส่วนผลลัพธ์ {p.share_of_total_reduction_pct}%
               </span>
               <CheckCircle2 className="h-4 w-4 text-emerald-600" />

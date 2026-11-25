@@ -175,12 +175,12 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-[#f6fbf8]">
       {/* Top Navbar */}
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur no-print">
+      <header className="sticky top-0 z-30 border-b border-emerald-100 bg-white/95 backdrop-blur no-print">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-600 text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm shadow-emerald-600/20">
               <Zap className="h-5 w-5" />
             </div>
             <div>
@@ -188,7 +188,7 @@ export default function DashboardPage() {
                 บริษัท ล้านนาพาวเวอร์ดิสทริบิวชัน จำกัด — Power Outage Analytics
               </h1>
               <p className="text-[11px] text-slate-500">
-                ข้อมูลถึง: <strong>{dashboardData.metadata.data_cutoff}</strong> · ทะเบียนสายป้อน:{" "}
+                ข้อมูลถึง: <strong className="text-emerald-700">{dashboardData.metadata.data_cutoff}</strong> · ทะเบียนสายป้อน:{" "}
                 {dashboardData.metadata.feeder_export_date} · Unplanned 2,594 ครั้ง
               </p>
             </div>
@@ -198,7 +198,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => exportEventsCsv(filteredEvents)}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs font-medium text-emerald-800 hover:bg-emerald-50"
             >
               <Download className="h-3.5 w-3.5" />
               CSV
@@ -206,7 +206,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => window.print()}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs font-medium text-emerald-800 hover:bg-emerald-50"
             >
               <Printer className="h-3.5 w-3.5" />
               PDF
@@ -214,7 +214,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={handleLogout}
-              className="inline-flex items-center gap-1 rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-200"
+              className="inline-flex items-center gap-1 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-medium text-emerald-800 hover:bg-emerald-100"
             >
               <LogOut className="h-3.5 w-3.5" />
               ออก
@@ -223,7 +223,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 pb-2">
+        <div className="mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 pb-2.5">
           {tabs.map((t) => {
             const Icon = t.icon;
             const active = activeTab === t.id;
@@ -232,10 +232,10 @@ export default function DashboardPage() {
                 key={t.id}
                 type="button"
                 onClick={() => setActiveTab(t.id)}
-                className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
+                className={`inline-flex shrink-0 items-center gap-1.5 rounded-xl px-3.5 py-1.5 text-xs font-semibold transition ${
                   active
-                    ? "bg-sky-600 text-white shadow-sm"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    ? "bg-emerald-600 text-white shadow-sm shadow-emerald-600/20"
+                    : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-800"
                 }`}
               >
                 <Icon className="h-3.5 w-3.5" />
@@ -248,14 +248,14 @@ export default function DashboardPage() {
 
       <main className="mx-auto max-w-7xl space-y-6 px-4 py-5">
         {/* 5D Filter Bar + Storm Toggle */}
-        <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm no-print">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-4 shadow-sm shadow-emerald-950/[0.03] no-print">
           <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             <div>
               <label className="block text-[11px] font-semibold text-slate-600">ปี (Year)</label>
               <select
                 value={filters.year}
                 onChange={(e) => updateFilter({ year: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs"
+                className="mt-1 w-full rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs focus:border-emerald-500 focus:outline-none"
               >
                 <option value="ALL">ทั้งหมด (2566–2567)</option>
                 <option value="2023">ปี 2566 (2023)</option>
@@ -268,7 +268,7 @@ export default function DashboardPage() {
               <select
                 value={filters.province}
                 onChange={(e) => updateFilter({ province: e.target.value, feeder: "ALL" })}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs"
+                className="mt-1 w-full rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs focus:border-emerald-500 focus:outline-none"
               >
                 <option value="ALL">ทุกจังหวัด (4 จังหวัด)</option>
                 {provinces.map((p) => (
@@ -282,7 +282,7 @@ export default function DashboardPage() {
               <select
                 value={filters.areaType}
                 onChange={(e) => updateFilter({ areaType: e.target.value, feeder: "ALL" })}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs"
+                className="mt-1 w-full rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs focus:border-emerald-500 focus:outline-none"
               >
                 <option value="ALL">ทุกพื้นที่</option>
                 <option value="Urban">เขตเมือง (Urban)</option>
@@ -296,7 +296,7 @@ export default function DashboardPage() {
               <select
                 value={filters.feeder}
                 onChange={(e) => updateFilter({ feeder: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs"
+                className="mt-1 w-full rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs focus:border-emerald-500 focus:outline-none"
               >
                 <option value="ALL">ทุกสายป้อน ({feederOptions.length})</option>
                 {feederOptions.map((fid) => (
@@ -310,7 +310,7 @@ export default function DashboardPage() {
               <select
                 value={filters.cause}
                 onChange={(e) => updateFilter({ cause: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs"
+                className="mt-1 w-full rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs focus:border-emerald-500 focus:outline-none"
               >
                 <option value="ALL">ทุกสาเหตุ (7 กลุ่ม)</option>
                 {Object.entries(CAUSE_LABELS).map(([k, lbl]) => (
@@ -325,7 +325,7 @@ export default function DashboardPage() {
                 onClick={() => updateFilter({ includeStorm: !filters.includeStorm })}
                 className={`inline-flex items-center justify-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-semibold transition ${
                   filters.includeStorm
-                    ? "border-sky-200 bg-sky-50 text-sky-800 hover:bg-sky-100"
+                    ? "border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100"
                     : "border-amber-400 bg-amber-100 text-amber-950 hover:bg-amber-200"
                 }`}
               >
@@ -335,7 +335,7 @@ export default function DashboardPage() {
               <button
                 type="button"
                 onClick={() => updateFilter(DEFAULT_FILTERS)}
-                className="inline-flex items-center justify-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-medium text-slate-600 hover:bg-slate-100"
+                className="inline-flex items-center justify-center gap-1 rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-medium text-slate-600 hover:bg-emerald-50 hover:text-emerald-800"
               >
                 <RotateCcw className="h-3 w-3" />
                 ล้างตัวกรอง
@@ -361,15 +361,15 @@ export default function DashboardPage() {
           </div>
         ) : isLoading ? (
           /* UI State: Loading */
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-14 text-center">
-            <Loader2 className="h-9 w-9 animate-spin text-sky-600" />
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-emerald-100 bg-white p-14 text-center">
+            <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
             <p className="mt-3 text-sm font-semibold text-slate-800">กำลังประมวลผลตัวชี้วัดและกราฟ...</p>
             <p className="mt-1 text-xs text-slate-500">กำลังคำนวณ SAIFI / SAIDI / CAIDI จากเหตุการณ์ Unplanned</p>
           </div>
         ) : filteredEvents.length === 0 ? (
           /* UI State: Empty */
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-12 text-center">
-            <FilterX className="h-10 w-10 text-slate-400" />
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-emerald-100 bg-white p-12 text-center">
+            <FilterX className="h-10 w-10 text-emerald-400" />
             <h2 className="mt-3 text-base font-bold text-slate-900">ไม่พบเหตุการณ์ไฟดับตามตัวกรองที่เลือก</h2>
             <p className="mt-1 max-w-md text-xs text-slate-500">
               เงื่อนไขที่เลือกอาจแคบเกินไป (เช่น สายป้อนในเขตเมืองที่เลือกพื้นที่เป็นชนบท) กรุณาลองล้างตัวกรองเพื่อดูข้อมูลทั้งหมด
@@ -377,7 +377,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => updateFilter(DEFAULT_FILTERS)}
-              className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-sky-600 px-4 py-2 text-xs font-semibold text-white hover:bg-sky-700"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               ล้างตัวกรองทั้งหมด

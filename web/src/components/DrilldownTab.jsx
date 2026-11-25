@@ -52,7 +52,7 @@ export default function DrilldownTab({
       ))}
 
       {/* Top 10 Feeders */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+      <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div>
             <h2 className="text-sm font-bold text-slate-900">
@@ -66,7 +66,7 @@ export default function DrilldownTab({
             <button
               type="button"
               onClick={onExportCsv}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-200 bg-white px-3 py-1.5 text-xs font-medium text-emerald-800 hover:bg-emerald-50"
             >
               <Download className="h-3.5 w-3.5" />
               Export CSV
@@ -74,7 +74,7 @@ export default function DrilldownTab({
             <button
               type="button"
               onClick={onPrintPdf}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-emerald-700"
             >
               <Printer className="h-3.5 w-3.5" />
               Export PDF
@@ -99,7 +99,7 @@ export default function DrilldownTab({
                 <XAxis type="number" tick={{ fontSize: 11 }} unit="M" />
                 <YAxis type="category" dataKey="feeder_id" width={72} tick={{ fontSize: 11 }} />
                 <Tooltip />
-                <Bar dataKey="cmMillion" name="Customer-Minutes (ล้าน)" fill="#0284c7" radius={[0, 6, 6, 0]} />
+                <Bar dataKey="cmMillion" name="Customer-Minutes (ล้าน)" fill="#059669" radius={[0, 6, 6, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </ChartWrapper>
@@ -115,9 +115,9 @@ export default function DrilldownTab({
 
       {/* Weather + Restoration */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <div className="flex items-center gap-2">
-            <CloudRain className="h-4 w-4 text-sky-600" />
+            <CloudRain className="h-4 w-4 text-teal-600" />
             <h2 className="text-sm font-bold text-slate-900">
               สภาพอากาศ vs อัตราไฟดับเฉลี่ยต่อจังหวัด/วัน
             </h2>
@@ -134,7 +134,7 @@ export default function DrilldownTab({
                   <XAxis dataKey="rain_tier" tick={{ fontSize: 10 }} />
                   <YAxis tick={{ fontSize: 11 }} />
                   <Tooltip />
-                  <Bar dataKey="avg_outages_per_day" name="ไฟดับเฉลี่ย (ครั้ง/จังหวัด/วัน)" fill="#0ea5e9" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="avg_outages_per_day" name="ไฟดับเฉลี่ย (ครั้ง/จังหวัด/วัน)" fill="#0d9488" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </ChartWrapper>
@@ -147,9 +147,9 @@ export default function DrilldownTab({
           />
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm print-break-inside-avoid">
+        <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03] print-break-inside-avoid">
           <div className="flex items-center gap-2">
-            <Truck className="h-4 w-4 text-amber-600" />
+            <Truck className="h-4 w-4 text-emerald-600" />
             <h2 className="text-sm font-bold text-slate-900">
               เวลากู้คืนและเวลาเดินทางช่างตามพื้นที่ (Urban / Suburban / Rural)
             </h2>
@@ -166,8 +166,8 @@ export default function DrilldownTab({
                   <YAxis tick={{ fontSize: 11 }} unit=" น." />
                   <Tooltip />
                   <Legend wrapperStyle={{ fontSize: 11 }} />
-                  <Bar dataKey="duration_median_min" name="มัธยฐานเวลาดับ (นาที)" fill="#f97316" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="crew_arrival_median_min" name="มัธยฐานเวลาเดินทางช่าง (นาที)" fill="#334155" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="duration_median_min" name="มัธยฐานเวลาดับ (นาที)" fill="#10b981" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="crew_arrival_median_min" name="มัธยฐานเวลาเดินทางช่าง (นาที)" fill="#64748b" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </ChartWrapper>
@@ -182,14 +182,14 @@ export default function DrilldownTab({
       </div>
 
       {/* Feeder Detail Table */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03]">
         <h2 className="text-sm font-bold text-slate-900">
           ตารางรายละเอียดรายสายป้อนตามตัวกรองปัจจุบัน ({feederRows.length} สายป้อน)
         </h2>
         <div className="mt-3 overflow-x-auto">
           <table className="w-full border-collapse text-left text-xs">
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-50 text-slate-600">
+              <tr className="border-b border-emerald-100 bg-emerald-50/60 text-slate-700">
                 <th className="px-3 py-2 font-semibold">Feeder</th>
                 <th className="px-3 py-2 font-semibold">จังหวัด</th>
                 <th className="px-3 py-2 font-semibold">พื้นที่</th>
@@ -207,9 +207,9 @@ export default function DrilldownTab({
                 <tr
                   key={row.feeder_id}
                   onClick={() => onSelectFeeder(row.feeder_id)}
-                  className="cursor-pointer hover:bg-sky-50/70"
+                  className="cursor-pointer hover:bg-emerald-50/70"
                 >
-                  <td className="px-3 py-2 font-semibold text-sky-700">{row.feeder_id}</td>
+                  <td className="px-3 py-2 font-semibold text-emerald-700">{row.feeder_id}</td>
                   <td className="px-3 py-2">{row.province}</td>
                   <td className="px-3 py-2">{row.area_type}</td>
                   <td className="px-3 py-2 text-right">{row.length_km}</td>

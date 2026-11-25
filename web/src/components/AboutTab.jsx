@@ -17,34 +17,34 @@ export default function AboutTab({
   return (
     <div className="space-y-6">
       {/* Performance Benchmark (Mission F) */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <section className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-950/[0.03]">
         <div className="flex items-center gap-2">
-          <Gauge className="h-5 w-5 text-sky-600" />
+          <Gauge className="h-5 w-5 text-emerald-600" />
           <h2 className="text-sm font-bold text-slate-900">
             ผลการวัดประสิทธิภาพระบบ (Mission F: Performance Benchmark)
           </h2>
         </div>
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
-            <p className="text-xs font-medium text-sky-800">First Load / App Hydration Time</p>
-            <p className="mt-1 text-2xl font-bold text-sky-950">
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+            <p className="text-xs font-medium text-emerald-800">First Load / App Hydration Time</p>
+            <p className="mt-1 text-2xl font-bold text-emerald-950">
               {perfStats.firstLoadMs !== null ? `${perfStats.firstLoadMs.toFixed(1)} ms` : "กำลังวัด..."}
             </p>
-            <p className="mt-1 text-[11px] text-sky-800">
+            <p className="mt-1 text-[11px] text-emerald-800">
               ({perfStats.firstLoadMs !== null ? `${(perfStats.firstLoadMs / 1000).toFixed(3)} วินาที` : "-"} · เป้าหมาย &lt; 0.300 วินาที)
             </p>
           </div>
-          <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
-            <p className="text-xs font-medium text-emerald-800">Filter Response Time (ล่าสุด / เฉลี่ย)</p>
-            <p className="mt-1 text-2xl font-bold text-emerald-950">
+          <div className="rounded-xl border border-teal-200 bg-teal-50/70 p-4">
+            <p className="text-xs font-medium text-teal-800">Filter Response Time (ล่าสุด / เฉลี่ย)</p>
+            <p className="mt-1 text-2xl font-bold text-teal-950">
               {perfStats.lastFilterMs.toFixed(2)} ms
             </p>
-            <p className="mt-1 text-[11px] text-emerald-800">
+            <p className="mt-1 text-[11px] text-teal-800">
               เฉลี่ยจากการกรอง {perfStats.filterCount} ครั้ง: {perfStats.avgFilterMs.toFixed(2)} ms
             </p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-            <p className="text-xs font-medium text-slate-700">ขอบเขตข้อมูล (Data Cutoff)</p>
+          <div className="rounded-xl border border-emerald-100 bg-white p-4">
+            <p className="text-xs font-medium text-slate-600">ขอบเขตข้อมูล (Data Cutoff)</p>
             <p className="mt-1 text-lg font-bold text-slate-900">{metadata.data_cutoff}</p>
             <p className="mt-1 text-[11px] text-slate-600">
               ทะเบียนสายป้อน: {metadata.feeder_export_date} · Unplanned: {metadata.unplanned_events.toLocaleString()} ครั้ง

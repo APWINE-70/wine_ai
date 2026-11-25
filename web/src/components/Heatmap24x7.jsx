@@ -10,13 +10,13 @@ export default function Heatmap24x7({ cells, maxCount }) {
   }
 
   const getBg = (count) => {
-    if (!count || maxCount <= 0) return "bg-slate-100 text-slate-400";
+    if (!count || maxCount <= 0) return "bg-slate-50 text-slate-300 border border-slate-100";
     const ratio = count / maxCount;
-    if (ratio >= 0.75) return "bg-rose-700 text-white font-semibold";
-    if (ratio >= 0.5) return "bg-orange-500 text-white font-medium";
-    if (ratio >= 0.3) return "bg-amber-300 text-slate-900";
-    if (ratio >= 0.15) return "bg-amber-100 text-slate-800";
-    return "bg-sky-50 text-slate-700";
+    if (ratio >= 0.75) return "bg-emerald-700 text-white font-semibold";
+    if (ratio >= 0.5) return "bg-emerald-500 text-white font-medium";
+    if (ratio >= 0.3) return "bg-emerald-300 text-emerald-950";
+    if (ratio >= 0.15) return "bg-emerald-100 text-emerald-900";
+    return "bg-emerald-50 text-emerald-700";
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Heatmap24x7({ cells, maxCount }) {
                   <div
                     key={hour}
                     title={`${dayName} ${String(hour).padStart(2, "0")}:00 น. — ${cnt} ครั้ง (${Math.round(cm).toLocaleString()} customer-min)`}
-                    className={`flex h-7 items-center justify-center rounded text-[10px] transition ${getBg(cnt)}`}
+                    className={`flex h-7 items-center justify-center rounded-md text-[10px] transition ${getBg(cnt)}`}
                   >
                     {cnt > 0 ? cnt : ""}
                   </div>
@@ -54,11 +54,11 @@ export default function Heatmap24x7({ cells, maxCount }) {
         </div>
         <div className="mt-2 flex flex-wrap items-center justify-end gap-3 text-[11px] text-slate-500">
           <span>ความถี่:</span>
-          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-slate-100 border border-slate-200" /> 0</span>
-          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-amber-100" /> ต่ำ</span>
-          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-amber-300" /> ปานกลาง</span>
-          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-orange-500" /> สูง</span>
-          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-rose-700" /> พีกสุด</span>
+          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded border border-slate-200 bg-slate-50" /> 0</span>
+          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-100" /> ต่ำ</span>
+          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-300" /> ปานกลาง</span>
+          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-500" /> สูง</span>
+          <span className="inline-flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-700" /> พีกสุด</span>
         </div>
       </div>
     </div>
