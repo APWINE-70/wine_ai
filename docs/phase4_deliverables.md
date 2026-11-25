@@ -16,19 +16,12 @@
 
 ---
 
-## 2. ขั้นตอนนำระบบขึ้น Production URL จริง (Vercel)
+## 2. สถานะการ Deploy Production URL จริง (Vercel)
 
-เนื่องจากยังไม่ได้ผูก Vercel CLI บนเครื่องนี้ การเผยแพร่ขึ้น Production URL สามารถทำได้ 2 วิธี:
-
-1. **เชื่อมผ่าน GitHub (แนะนำ):**
-   - Push โค้ดจาก `C:\Apai` ขึ้น `https://github.com/APWINE-70/wine_ai.git` (`git push -u origin main`)
-   - เข้า Vercel → **Add New Project** → Import `APWINE-70/wine_ai` → ตั้ง **Root Directory = `web`** → กด **Deploy**
-2. **หรือใช้ Vercel CLI:**
-   ```powershell
-   cd C:\Apai\web
-   npx vercel --prod
-   ```
-3. เมื่อได้ URL จริงแล้ว ให้นำมาเติมแทน `<ระบุ URL หลัง Deploy ขึ้น Vercel>` ใน [docs/quick_guide.md](quick_guide.md)
+- **Production URL หลัก:** [https://wineai-one.vercel.app](https://wineai-one.vercel.app) (HTTP 200 · READY)
+- **Production URL สำรอง:** [https://wineai-nrt6.vercel.app](https://wineai-nrt6.vercel.app)
+- **GitHub Integration:** เชื่อมกับ `APWINE-70/wine_ai` (`main` branch, `Root Directory = web`, `Framework = nextjs`)
+- **Test Account:** `judge@lannapower.co.th` / `Lanna2025!` (บันทึกใน [docs/quick_guide.md](quick_guide.md))
 
 ---
 

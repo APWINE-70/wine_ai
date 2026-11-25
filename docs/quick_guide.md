@@ -7,7 +7,7 @@
 
 ## 1. การเข้าใช้งานระบบ (URL & บัญชีทดสอบ)
 
-- **Production URL (Vercel):** `<ระบุ URL หลัง Deploy ขึ้น Vercel>` *(ตั้ง Root Directory = `web`, Framework = Next.js, Output = `out` ตาม `web/vercel.json`)*
+- **Production URL (Vercel):** [https://wineai-one.vercel.app](https://wineai-one.vercel.app) *(สำรอง: [https://wineai-nrt6.vercel.app](https://wineai-nrt6.vercel.app))*
 - **บัญชีทดสอบสำหรับกรรมการ (Test Account — กรอกให้อัตโนมัติบนหน้า Login):**
   - **Email:** `judge@lannapower.co.th`
   - **Password:** `Lanna2025!`

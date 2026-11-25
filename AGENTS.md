@@ -22,6 +22,7 @@
 - `web/` — Phase 3 Next.js 14.2.25 Static Export dashboard (`output: "export"`, Tailwind CSS, Recharts, Lucide Icons, `ChartWrapper` SSR-safe guard):
   - Build: `cd C:\Apai\web; cmd /c npm run build` (outputs static site to `web/out/`)
   - Dev: `cd C:\Apai\web; cmd /c npm run dev`
+  - Production URLs: `https://wineai-one.vercel.app` / `https://wineai-nrt6.vercel.app`
   - Judge Test Account: `judge@lannapower.co.th` / `Lanna2025!`
 - `tests/test_pipeline_and_metrics.py` — End-to-end `unittest` suite using synthetic fixtures & real-dataset Phase 1–2 invariants (`python -m unittest discover -s tests -v`)
 - `docs/` — Documentation deliverables:
